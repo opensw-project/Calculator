@@ -14,6 +14,8 @@
      - コードは３人以上が検討して同意すればメインを編集できる。
      - 組織メンバー以外の人がコードを提案すれば５人以上の検討と同意で編集することができる。  
      - ライセンスはGPL 2.0を使用する。
+
+
 Kalkulyator dasturini yaratish
   
 Qoida - Har kim kodni yuklashi mumkin.
