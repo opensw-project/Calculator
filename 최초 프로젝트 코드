@@ -10,10 +10,14 @@ class Calculator:
 
     def divide(self, x, y):
         return x / y
+        
+    def squared(self, x, y):
+        return x ** y
+
 
 cal = Calculator()
 print("계산 가능한 연산 목록")
-print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)")
+print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)")
 
 choice = input("수식 선택")
 num1 = float(input(" "))
@@ -30,6 +34,9 @@ if choice == '곱하기' or choice == '*':
 
 if choice == '나누기' or choice == '/':
    print(num1, "/", num2, "=", cal.divide(num1,num2))
+
+if choice == '제곱' or choice == '**':
+   print(num1, "**", num2, "=", cal.squared(num1,num2))
 
 else:
      print("사용 종료")
