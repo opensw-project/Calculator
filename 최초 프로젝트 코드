@@ -29,21 +29,20 @@ num2 = float(input(" "))
 if choice == '더하기' or choice == '+':
    print(num1, "+", num2, "=", cal.add(num1, num2))
 
-if choice == '빼기' or choice == '-':
+elif choice == '빼기' or choice == '-':
    print(num1, "-", num2, "=", cal.subtract(num1,num2))
 
-if choice == '곱하기' or choice == '*':
+elif choice == '곱하기' or choice == '*':
    print(num1, "*", num2, "=", cal.multiply(num1,num2))
 
-if choice == '나누기' or choice == '/':
+elif choice == '나누기' or choice == '/':
    print(num1, "/", num2, "=", cal.divide(num1,num2))
 
-if choice == '제곱' or choice == '**':
+elif choice == '제곱' or choice == '**':
    print(num1, "**", num2, "=", cal.squared(num1,num2))
    
-if choice == '나머지' or choice == '%':
+elif choice == '나머지' or choice == '%':
    print(num1, "%", num2, "=", cal.modulo(num1,num2))
-
 
 else:
      print("사용 종료")
