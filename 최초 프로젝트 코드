@@ -10,39 +10,80 @@ class Calculator:
 
     def divide(self, x, y):
         return x / y
-        
+
     def squared(self, x, y):
         return x ** y
-        
+    
     def modulo(self, x, y):
         return x % y
 
+    def root(self, x):
+        return x ** (1/2)
+    
 
 cal = Calculator()
+
+def factorial(x):
+    if x == 1:      # n이 1일 때
+        return 1    # 1을 반환하고 재귀호출을 끝냄
+    return x * factorial(x - 1)    # n과 factorial 함수에 n - 1을 넣어서 반환된 값을 곱함
+
+
 print("계산 가능한 연산 목록")
-print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)")
+print("계산목록1 - 더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)    나머지(%)")
+print("계산목록2 - 팩토리얼(!)    루트(R)")
+print(" ")
+print("'계산목록1' or '계산목록2' 을 입력하세요")
 
-choice = input("수식 선택")
-num1 = float(input(" "))
-num2 = float(input(" "))
+firstchoice = input(" ")
 
-if choice == '더하기' or choice == '+':
-   print(num1, "+", num2, "=", cal.add(num1, num2))
+#계산목록1
+if firstchoice == '계산목록1':
+    print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)    나머지(%)")
+    
+    #입력
+    choice = input("계산하려는 수식을 입력하세요")
+    print("숫자를 입력하세요")
+    num1 = float(input(" "))
+    print("숫자를 입력하세요")
+    num2 = float(input(" "))
+    
+    #계산
+    if choice == '더하기' or choice == '+':
+        print(num1, "+", num2, "=", cal.add(num1, num2))
 
-elif choice == '빼기' or choice == '-':
-   print(num1, "-", num2, "=", cal.subtract(num1,num2))
+    elif choice == '빼기' or choice == '-':
+        print(num1, "-", num2, "=", cal.subtract(num1,num2))
 
-elif choice == '곱하기' or choice == '*':
-   print(num1, "*", num2, "=", cal.multiply(num1,num2))
+    elif choice == '곱하기' or choice == '*':
+        print(num1, "*", num2, "=", cal.multiply(num1,num2))
 
-elif choice == '나누기' or choice == '/':
-   print(num1, "/", num2, "=", cal.divide(num1,num2))
+    elif choice == '나누기' or choice == '/':
+        print(num1, "/", num2, "=", cal.divide(num1,num2))
 
-elif choice == '제곱' or choice == '**':
-   print(num1, "**", num2, "=", cal.squared(num1,num2))
-   
-elif choice == '나머지' or choice == '%':
-   print(num1, "%", num2, "=", cal.modulo(num1,num2))
+    elif choice == '제곱' or choice == '**':
+        print(num1, "**", num2, "=", cal.squared(num1,num2))
+
+    elif choice == '나머지' or choice == '%':
+        print(num1, "%", num2, "=", cal.modulo(num1,num2))
+
+#계산목록2
+if firstchoice == '계산목록2':
+    print("팩토리얼(!)    루트(R)")
+
+    #입력
+    choice = input("위 수식을 선택하세요")
+    print("숫자를 입력하세요")
+    num1 = float(input(" "))
+
+
+    #계산
+    if choice == '팩토리얼' or choice == '!':
+        print(num1, "!", "=", factorial(num1))
+
+    elif choice == '루트' or choice =='R':
+        print(num1, "√", "=", cal.root(num1))
+
 
 else:
      print("사용 종료")
