@@ -16,33 +16,59 @@ class Calculator:
         
     def modulo(self, x, y):
         return x % y
+    
+    
+    def det(self, n):   # 행렬식
+        l = []          
+    
+        print('한 행씩 입력!!(예: 1 2)')
+        
+        for i in range(n):
+            a = list(map(int, input().split()))
+            l.append(a)
+
+        if n == 2:
+            return (l[0][0]*l[1][1]) - (l[0][1]*l[1][0])
+
+        #else:
+            # 3차 행렬식
+        
+
 
 
 cal = Calculator()
-print("계산 가능한 연산 목록")
-print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)")
 
-choice = input("수식 선택")
-num1 = float(input(" "))
-num2 = float(input(" "))
+while True:
+    print("계산 가능한 연산 목록")
+    print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  행렬식(det)  종료(0)")
 
-if choice == '더하기' or choice == '+':
-   print(num1, "+", num2, "=", cal.add(num1, num2))
+    choice = input("수식 선택 >> ")
+    if choice == '0':
+        break
 
-elif choice == '빼기' or choice == '-':
-   print(num1, "-", num2, "=", cal.subtract(num1,num2))
+    elif choice == 'det':
+            n = int(input('정방행렬 입력 : '))
+            result = cal.det(n)
+            print(result,'\n')
+        
+    else:
+        num1 = float(input(" "))
+        num2 = float(input(" "))
 
-elif choice == '곱하기' or choice == '*':
-   print(num1, "*", num2, "=", cal.multiply(num1,num2))
+        if choice == '더하기' or choice == '+':
+            print(num1, "+", num2, "=", cal.add(num1, num2))
 
-elif choice == '나누기' or choice == '/':
-   print(num1, "/", num2, "=", cal.divide(num1,num2))
+        elif choice == '빼기' or choice == '-':
+            print(num1, "-", num2, "=", cal.subtract(num1,num2))
 
-elif choice == '제곱' or choice == '**':
-   print(num1, "**", num2, "=", cal.squared(num1,num2))
-   
-elif choice == '나머지' or choice == '%':
-   print(num1, "%", num2, "=", cal.modulo(num1,num2))
+        elif choice == '곱하기' or choice == '*':
+            print(num1, "*", num2, "=", cal.multiply(num1,num2))
 
-else:
-     print("사용 종료")
+        elif choice == '나누기' or choice == '/':
+            print(num1, "/", num2, "=", cal.divide(num1,num2))
+
+        elif choice == '제곱' or choice == '**':
+            print(num1, "**", num2, "=", cal.squared(num1,num2))
+        
+        elif choice == '나머지' or choice == '%':
+            print(num1, "%", num2, "=", cal.modulo(num1,num2))
