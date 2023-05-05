@@ -1,3 +1,5 @@
+import math
+
 class Calculator:   
     def add(self, x, y):
         return x + y
@@ -16,33 +18,58 @@ class Calculator:
         
     def modulo(self, x, y):
         return x % y
+        
+    def square_root(self, x):  #제곱근
+        return math.sqrt(x)
 
 
 cal = Calculator()
 print("계산 가능한 연산 목록")
-print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)")
+print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  제곱근(√)")
 
 choice = input("수식 선택")
 num1 = float(input("첫번째 숫자"))
 num2 = float(input("두번째 숫자"))
 
-if choice == '더하기' or choice == '+':
-   print(num1, "+", num2, "=", cal.add(num1, num2))
+while True:
+    choice = input("수식 선택>>")
+    if choice == '더하기' or choice == '+':
+        num1 = float(input("첫번째 숫자>>"))
+        num2 = float(input("두번째 숫자>>"))
+        print(num1, "+", num2, "=", cal.add(num1, num2))
 
-elif choice == '빼기' or choice == '-':
-   print(num1, "-", num2, "=", cal.subtract(num1,num2))
+    elif choice == '빼기' or choice == '-':
+        num1 = float(input("첫번째 숫자>>"))
+        num2 = float(input("두번째 숫자>>"))
+        print(num1, "-", num2, "=", cal.subtract(num1,num2))
 
-elif choice == '곱하기' or choice == '*':
-   print(num1, "*", num2, "=", cal.multiply(num1,num2))
+    elif choice == '곱하기' or choice == '*':
+        num1 = float(input("첫번째 숫자>>"))
+        num2 = float(input("두번째 숫자>>"))
+        print(num1, "*", num2, "=", cal.multiply(num1,num2))
 
-elif choice == '나누기' or choice == '/':
-   print(num1, "/", num2, "=", cal.divide(num1,num2))
+    elif choice == '나누기' or choice == '/':
+        num1 = float(input("첫번째 숫자>>"))
+        num2 = float(input("두번째 숫자>>"))
+        print(num1, "/", num2, "=", cal.divide(num1,num2))
 
-elif choice == '제곱' or choice == '**':
-   print(num1, "**", num2, "=", cal.squared(num1,num2))
+    elif choice == '제곱' or choice == '**':
+        num1 = float(input("첫번째 숫자>>"))
+        num2 = float(input("제곱할 수>>"))
+        print(num1, "**", num2, "=", cal.squared(num1,num2))
    
-elif choice == '나머지' or choice == '%':
-   print(num1, "%", num2, "=", cal.modulo(num1,num2))
+    elif choice == '나머지' or choice == '%':
+        num1 = float(input("첫번째 숫자>>"))
+        num2 = float(input("나눌 수>>"))
+        print(num1, "%", num2, "=", cal.modulo(num1,num2))
 
-else:
-     print("사용 종료")
+    elif choice == '제곱근' or choice == '√':
+        num = float(input("숫자>>"))
+        print("√", num, "=", cal.square_root(num))
+
+    elif choice == '종료':
+        print("사용종료")
+        break
+    else:
+        print("잘못된 입력입니다.")
+        continue
