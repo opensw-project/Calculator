@@ -44,12 +44,12 @@ while True:
 
     choice = input("수식 선택 >> ")
     if choice == '0':
-        break
-
-    elif choice == 'det':
-            n = int(input('정방행렬 입력 : '))
-            result = cal.det(n)
-            print(result,'\n')
+      break
+     
+    if choice == 'det':
+      n = int(input('정방행렬 입력 : '))
+      result = cal.det(n)
+      print(result,'\n')
         
     else:
         num1 = float(input(" "))
