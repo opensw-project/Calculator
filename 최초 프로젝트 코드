@@ -22,8 +22,15 @@ class Calculator:
     def square_root(self, x):  #제곱근
         return math.sqrt(x)
 
-
-cal = Calculator()
+    def variance(self, nums):  #분산
+        n = len(nums)
+        mean = sum(nums) / n
+        return sum((x-mean) ** 2 for x in nums) / n
+    
+    def std_deviation(self, nums):   #표준편차
+        return math.sqrt(self.variance(nums))
+c
+al = Calculator()
 print("계산 가능한 연산 목록")
 print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  제곱근(√)")
 
@@ -105,6 +112,39 @@ while True:
             except ValueError:
                 print("숫자를 입력하세요")
         print("√", num, "=", cal.square_root(num))
+        
+    elif choice == '분산':
+        nums = []
+        while True:
+            try:
+                input_data = input("데이터를 입력하세요(구분자: 공백 또는 쉼표)>> ")
+                nums = [float(x) for x in input_data.replace(",", " ").split()]
+                if len(nums) < 2:
+                    print("데이터를 두 개 이상 입력하세요")
+                    continue
+                else:
+                    break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        print("분산:", cal.variance(nums))
+    
+    elif choice == '표준편차':
+        nums = []
+        while True:
+            try:
+                input_data = input("데이터를 입력하세요(구분자: 공백 또는 쉼표)>> ")
+                nums = [float(x) for x in input_data.replace(",", " ").split()]
+                if len(nums) < 2:
+                    print("데이터를 두 개 이상 입력하세요")
+                    continue
+                else:
+                    break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        print("표준편차:", cal.std_deviation(nums))
+
 
     elif choice == '종료':
         print("사용종료")
