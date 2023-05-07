@@ -32,37 +32,78 @@ print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  
 while True:
     choice = input("수식 선택>>")
     if choice == '더하기' or choice == '+':
-        num1 = float(input("첫번째 숫자>>"))
-        num2 = float(input("두번째 숫자>>"))
+        while True: 
+            try:
+                num1 = float(input("첫번째 숫자>>"))
+                num2 = float(input("두번째 숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
         print(num1, "+", num2, "=", cal.add(num1, num2))
 
     elif choice == '빼기' or choice == '-':
-        num1 = float(input("첫번째 숫자>>"))
-        num2 = float(input("두번째 숫자>>"))
+        while True:
+            try:
+                num1 = float(input("첫번째 숫자>>"))
+                num2 = float(input("두번째 숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
         print(num1, "-", num2, "=", cal.subtract(num1,num2))
 
     elif choice == '곱하기' or choice == '*':
-        num1 = float(input("첫번째 숫자>>"))
-        num2 = float(input("두번째 숫자>>"))
+        while True: 
+            try:
+                num1 = float(input("첫번째 숫자>>"))
+                num2 = float(input("두번째 숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
         print(num1, "*", num2, "=", cal.multiply(num1,num2))
 
     elif choice == '나누기' or choice == '/':
-        num1 = float(input("첫번째 숫자>>"))
-        num2 = float(input("두번째 숫자>>"))
+        while True: 
+            try:
+                num1 = float(input("첫번째 숫자>>"))
+                num2 = float(input("두번째 숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
         print(num1, "/", num2, "=", cal.divide(num1,num2))
 
     elif choice == '제곱' or choice == '**':
-        num1 = float(input("첫번째 숫자>>"))
-        num2 = float(input("제곱할 수>>"))
+        while True: 
+            try:
+                num1 = float(input("첫번째 숫자>>"))
+                num2 = float(input("제곱할 수>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
         print(num1, "**", num2, "=", cal.squared(num1,num2))
    
     elif choice == '나머지' or choice == '%':
-        num1 = float(input("첫번째 숫자>>"))
-        num2 = float(input("나눌 수>>"))
+        while True: 
+            try:
+                num1 = float(input("첫번째 숫자>>"))
+                num2 = float(input("나눌 수>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
         print(num1, "%", num2, "=", cal.modulo(num1,num2))
 
     elif choice == '제곱근' or choice == '√':
-        num = float(input("숫자>>"))
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
         print("√", num, "=", cal.square_root(num))
 
     elif choice == '종료':
