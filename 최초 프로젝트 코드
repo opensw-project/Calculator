@@ -60,8 +60,8 @@ class Calculator:
 
 cal = Calculator()
 print("계산 가능한 연산 목록")
-print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  제곱근(√)  분산 표준편차 시간계산(h:m:s)  지수(e)  
-        사인(sin)  코사인(cos)  탄젠트(tan)  역사인(asin)  코사인(acos)  탄젠트(atan)")
+print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  제곱근(√)  분산 표준편차 시간계산(h:m:s)  지수(e)")  
+print("사인(sin)  코사인(cos)  탄젠트(tan)  역사인(asin)  코사인(acos)  탄젠트(atan)")
 
 
 
