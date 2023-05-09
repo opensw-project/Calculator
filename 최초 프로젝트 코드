@@ -32,11 +32,36 @@ class Calculator:
         
     def time_change(self,x):   #초→(시간:분:초)
         return f'{x//3600}:{x%3600//60}:{x%60}'
+        
+    def exp(self,x):    #지수 e^x를 반환합니다
+        return math.exp(x)
+        
+    def sin(self,x):     #사인값
+        return math.sin(x)
+        
+    def cos(self,x):     #코사인값
+        return math.cos(x)
+
+    def tan(self,x):     #탄젠트
+        return math.tan(x)
+
+    def asin(self,x):     #역사인값
+        return math.asin(x)
+        
+    def acos(self,x):     #역코사인값
+        return math.acos(x)
+
+    def atan(self,x):     #역탄젠트값
+        return math.atan(x)
+
+
+
 
 
 cal = Calculator()
 print("계산 가능한 연산 목록")
-print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  제곱근(√)  분산 표준편차 시간계산(h:m:s)")
+print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  제곱근(√)  분산 표준편차 시간계산(h:m:s)  지수(e)  
+        사인(sin)  코사인(cos)  탄젠트(tan)  역사인(asin)  코사인(acos)  탄젠트(atan)")
 
 
 
@@ -158,6 +183,70 @@ while True:
                 print("숫자를 입력하세요")
                 continue
         print(num,"초", "=", cal.time_change(num),"(시간:분:초)")
+        
+    elif choice == '지수' or choice == 'e':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("e^", num, "=", cal.exp(num))
+        
+    elif choice == '사인' or choice == 'sin':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("sin", num, "=", cal.sin(num))
+
+    elif choice == '코사인' or choice == 'cos':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("cos", num, "=", cal.cos(num))
+        
+    elif choice == '탄젠트' or choice == 'tan':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("tan", num, "=", cal.tan(num))
+        
+    elif choice == '역사인' or choice == 'asin':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("asin", num, "=", cal.asin(num))
+
+    elif choice == '약코사인' or choice == 'acos':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("acos", num, "=", cal.acos(num))
+        
+    elif choice == '역탄젠트' or choice == 'atan':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("atan", num, "=", cal.atan(num))
+
 
 
     elif choice == '종료':
