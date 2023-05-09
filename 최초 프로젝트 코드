@@ -29,11 +29,14 @@ class Calculator:
     
     def std_deviation(self, nums):   #표준편차
         return math.sqrt(self.variance(nums))
+        
+    def time_change(self,x):   #초→(시간:분:초)
+        return f'{x//3600}:{x%3600//60}:{x%60}'
 
 
 cal = Calculator()
 print("계산 가능한 연산 목록")
-print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  제곱근(√)")
+print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  제곱근(√)  시간계산(h:m:s)")
 
 
 
@@ -145,6 +148,16 @@ while True:
                 print("숫자를 입력하세요")
                 continue
         print("표준편차:", cal.std_deviation(nums))
+        
+    elif choice == '시간계산' or choice == 'h:m:s':
+        while True: 
+            try:
+                num = int(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        print(num,"초", "=", cal.time_change(num),"(시간:분:초)")
 
 
     elif choice == '종료':
