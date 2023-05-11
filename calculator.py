@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
 import math
 
 class Calculator:   
@@ -53,15 +59,17 @@ class Calculator:
 
     def atan(self,x):     #역탄젠트값
         return math.atan(x)
-
-
-
+    
+    def factorial(self,x):
+        if x == 1:      # n이 1일 때
+            return 1    # 1을 반환하고 재귀호출을 끝냄
+        return x * cal.factorial(x - 1)
 
 
 cal = Calculator()
 print("계산 가능한 연산 목록")
 print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  제곱근(√)  분산 표준편차 시간계산(h:m:s)  지수(e)")  
-print("사인(sin)  코사인(cos)  탄젠트(tan)  역사인(asin)  역코사인(acos)  탄젠트(atan)")
+print("사인(sin)  코사인(cos)  탄젠트(tan)  역사인(asin)  코사인(acos)  탄젠트(atan)")
 
 
 
@@ -229,7 +237,7 @@ while True:
                 print("숫자를 입력하세요")
         print("asin", num, "=", cal.asin(num))
 
-    elif choice == '코사인' or choice == 'acos':
+    elif choice == '약코사인' or choice == 'acos':
         while True: 
             try:
                 num = float(input("숫자>>"))
@@ -247,6 +255,10 @@ while True:
                 print("숫자를 입력하세요")
         print("atan", num, "=", cal.atan(num))
 
+    elif choice == '팩토리얼' or choice == '!':
+        print("숫자를 입력하세요")
+        num1 = float(input(" "))
+        print(num1, "!", "=", cal.factorial(num1))
 
 
     elif choice == '종료':
@@ -255,3 +267,4 @@ while True:
     else:
         print("잘못된 입력입니다.")
         continue
+
