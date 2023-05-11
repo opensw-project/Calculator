@@ -61,7 +61,7 @@ class Calculator:
 cal = Calculator()
 print("계산 가능한 연산 목록")
 print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  제곱근(√)  분산 표준편차 시간계산(h:m:s)  지수(e)")  
-print("사인(sin)  코사인(cos)  탄젠트(tan)  역사인(asin)  코사인(acos)  탄젠트(atan)")
+print("사인(sin)  코사인(cos)  탄젠트(tan)  역사인(asin)  역코사인(acos)  탄젠트(atan)")
 
 
 
@@ -229,7 +229,7 @@ while True:
                 print("숫자를 입력하세요")
         print("asin", num, "=", cal.asin(num))
 
-    elif choice == '약코사인' or choice == 'acos':
+    elif choice == '코사인' or choice == 'acos':
         while True: 
             try:
                 num = float(input("숫자>>"))
