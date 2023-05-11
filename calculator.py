@@ -53,7 +53,9 @@ class Calculator:
 
     def atan(self,x):     #역탄젠트값
         return math.atan(x)
-
+    
+    def fabs(self, x):    #절대값 
+        return math.fabs(x)    
 
 
 
@@ -247,8 +249,16 @@ while True:
                 print("숫자를 입력하세요")
         print("atan", num, "=", cal.atan(num))
 
-
-
+    elif choice == '절대값' or choicee == 'fabs'
+         while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print('fabs', num, "=", cal.fabs(num))
+        
+        
     elif choice == '종료':
         print("사용종료")
         break
