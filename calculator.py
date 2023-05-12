@@ -64,6 +64,10 @@ class Calculator:
         if x == 1:      # n이 1일 때
             return 1    # 1을 반환하고 재귀호출을 끝냄
         return x * cal.factorial(x - 1)
+    
+    def fabs(self, x):    #절대값
+        return math.fabs(x)
+
 
 
 cal = Calculator()
@@ -259,6 +263,15 @@ while True:
         print("숫자를 입력하세요")
         num1 = float(input(" "))
         print(num1, "!", "=", cal.factorial(num1))
+        
+    elif choice == '절대값' or choice == 'fabs':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print('fabs', num, "=", cal.fabs(num))
 
 
     elif choice == '종료':
