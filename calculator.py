@@ -67,13 +67,29 @@ class Calculator:
     
     def fabs(self, x):    #절대값
         return math.fabs(x)
+    
+    
+    def deter(self, n):   # 행렬식
+        l = []
+        
+        print('한 행씩 입력!!(예: 1 2)')
+
+        for i in range(n):
+            a = list(map(int, input().split()))
+            l.append(a)
+
+        if n == 2:
+            return (l[0][0]*l[1][1]) - (l[0][1]*l[1][0])
+
+        #else:
+            # 3차 행렬식
 
 
 
 cal = Calculator()
 print("계산 가능한 연산 목록")
 print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  제곱근(√)  분산 표준편차 시간계산(h:m:s)  지수(e)")  
-print("사인(sin)  코사인(cos)  탄젠트(tan)  역사인(asin)  코사인(acos)  탄젠트(atan)")
+print("사인(sin)  코사인(cos)  탄젠트(tan)  역사인(asin)  코사인(acos)  탄젠트(atan)  행렬식(det)")
 
 
 
@@ -272,8 +288,22 @@ while True:
             except ValueError:
                 print("숫자를 입력하세요")
         print('fabs', num, "=", cal.fabs(num))
-
-
+        
+        
+    elif choice == '행렬식' or choice == 'det':
+        while True:
+            try:
+                n = int(input('행렬의 차원 입력 : '))
+                break
+            
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        
+        print(cal.deter(n))
+        
+        
+        
     elif choice == '종료':
         print("사용종료")
         break
