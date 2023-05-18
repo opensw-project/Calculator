@@ -83,6 +83,24 @@ class Calculator:
 
         #else:
             # 3차 행렬식
+           
+     def calculate_regression_line(self, x_values, y_values):
+    n = len(x_values)
+    if n != len(y_values):
+        raise ValueError("x값의 수와 y값의 수는 같아야 합니다.")
+    
+    # x, y, x^2, xy의 합을 계산합니다.
+    sum_x = sum(x_values)
+    sum_y = sum(y_values)
+    sum_x_squared = sum(x ** 2 for x in x_values)
+    sum_xy = sum(x * y for x, y in zip(x_values, y_values))
+
+    # 기울기 (m)와 y절편 (b)을 계산합니다.
+    slope = (n * sum_xy - sum_x * sum_y) / (n * sum_x_squared - sum_x ** 2)
+    y_intercept = (sum_y - slope * sum_x) / n
+    #coefficients = np.polyfit(x_values, y_values, 1)
+    #p = np.poly1d(coefficients)
+    return slope, y_intercept
 
 
 
@@ -301,7 +319,32 @@ while True:
                 continue
         
         print(cal.deter(n))
-        
+    
+    elif choice == '회귀직선':
+        while True:
+        try:
+            input_data = input("y값을 입력하세요(구분자: 공백 또는 쉼표)>> ")
+            y_values = [float(y) for y in input_data.replace(",", " ").split()]
+            if len(y_values) != len(x_values):
+                print("x값의 수와 y값의 수가 같아야 합니다")
+                continue
+            else:
+                break
+        except ValueError:
+            print("숫자를 입력하세요")
+            continue
+    slope, y_intercept = cal.calculate_regression_line(x_values, y_values)
+    print("기울기:",slope)
+    print("y 절편:",y_intercept )
+    print("회귀직선: y의 예측값 =",y_intercept ,"+", slope, "x")
+    regression_line = np.poly1d([slope, y_intercept])
+
+    plt.scatter(x_values, y_values)  # 데이터 산점도 그래프
+    plt.plot(x_values, regression_line(x_values), "r")  # 회귀직선 그래프
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.title("Regression Line")
+    plt.show()
         
         
     elif choice == '종료':
