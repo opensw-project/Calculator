@@ -323,17 +323,31 @@ while True:
     
     elif choice == '회귀직선':
         while True:
-        try:
-            input_data = input("y값을 입력하세요(구분자: 공백 또는 쉼표)>> ")
-            y_values = [float(y) for y in input_data.replace(",", " ").split()]
-            if len(y_values) != len(x_values):
-                print("x값의 수와 y값의 수가 같아야 합니다")
-                continue
+            try:
+                input_data = input("y값을 입력하세요(구분자: 공백 또는 쉼표)>> ")
+                y_values = [float(y) for y in input_data.replace(",", " ").split()]
+                if len(y_values) != len(x_values):
+                    print("x값의 수와 y값의 수가 같아야 합니다")
+                    continue
             else:
                 break
-        except ValueError:
-            print("숫자를 입력하세요")
-            continue
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        while True:      #y값을 입력받는 코드
+            try:
+                input_data = input("y값을 입력하세요(구분자: 공백 또는 쉼표)>> ")
+                y_values = [float(y) for y in input_data.replace(",", " ").split()]
+                if len(y_values) != len(x_values):
+                    print("x값의 수와 y값의 수가 같아야 합니다")
+                    continue
+                else:
+                    break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue     
+                
+        
     slope, y_intercept = cal.calculate_regression_line(x_values, y_values)
     print("기울기:",slope)
     print("y 절편:",y_intercept )
