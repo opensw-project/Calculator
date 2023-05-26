@@ -8,69 +8,69 @@ import numpy as np
 import math
 
 class Calculator:   
-    def add(self, x, y): #덧셈
+    def add(self, x, y): #덧셈　(足し算)
         return x + y
 
-    def subtract(self, x, y): #뺄셈
+    def subtract(self, x, y): #뺄셈　(引き算)
         return x - y
 
-    def multiply(self, x, y): 곱셈
+    def multiply(self, x, y): #곱셈 (掛け算)
         return x * y
 
-    def divide(self, x, y): 나눗셈
+    def divide(self, x, y): #나눗셈 (割り算)
         return x / y
 
-    def squared(self, x, y): 제곱
+    def squared(self, x, y): #제곱 (平方)
         return x ** y
 
-    def modulo(self, x, y): #나머지
+    def modulo(self, x, y): #나머지　(余り)
         return x % y
 
-    def square_root(self, x):  #제곱근
+    def square_root(self, x):  #제곱근　(平方根)
         return math.sqrt(x)
 
-    def variance(self, nums):  #분산
+    def variance(self, nums):  #분산　(分散)
         n = len(nums)
         mean = sum(nums) / n
         return sum((x-mean) ** 2 for x in nums) / n
 
-    def std_deviation(self, nums):   #표준편차
+    def std_deviation(self, nums):   #표준편차　(標準偏差)
         return math.sqrt(self.variance(nums))
 
-    def time_change(self,x):   #초→(시간:분:초)
+    def time_change(self,x):   #초→(시간:분:초)　    秒→(時間:分:秒)
         return f'{x//3600}:{x%3600//60}:{x%60}'
 
-    def exp(self,x):    #지수 e^x를 반환합니다
+    def exp(self,x):    #지수 e^x를 반환합니다 (指数　e^xを返還)
         return math.exp(x)
 
-    def sin(self,x):     #사인값
+    def sin(self,x):     #사인값 (サイン値)
         return math.sin(x)
 
-    def cos(self,x):     #코사인값
+    def cos(self,x):     #코사인값　(コサイン値)
         return math.cos(x)
 
-    def tan(self,x):     #탄젠트
+    def tan(self,x):     #탄젠트 (タンジェント)
         return math.tan(x)
 
-    def asin(self,x):     #역사인값
+    def asin(self,x):     #역사인값 (逆サイン値)
         return math.asin(x)
 
-    def acos(self,x):     #역코사인값
+    def acos(self,x):     #역코사인값　(逆サイン値)
         return math.acos(x)
 
-    def atan(self,x):     #역탄젠트값
+    def atan(self,x):     #역탄젠트값　　(逆タンジェント値)
         return math.atan(x)
     
     def factorial(self,x):
-        if x == 1:      # n이 1일 때
-            return 1    # 1을 반환하고 재귀호출을 끝냄
+        if x == 1:      # n이 1일 때　　(nが１のとき)
+            return 1    # 1을 반환하고 재귀호출을 끝냄　　(１を返還して再帰呼び出し終了)
         return x * cal.factorial(x - 1)
     
-    def fabs(self, x):    #절대값
+    def fabs(self, x):    #절대값　　(絶対値)
         return math.fabs(x)
     
     
-    def deter(self, n):   # 행렬식
+    def deter(self, n):   # 행렬식　　(行列式)
         l = []
         
         print('한 행씩 입력!!(예: 1 2)')
@@ -83,20 +83,21 @@ class Calculator:
             return (l[0][0]*l[1][1]) - (l[0][1]*l[1][0])
 
         #else:
-            # 3차 행렬식
+            # 3차 행렬식　　(3次行列式)
            
     def calculate_regression_line(self, x_values, y_values):
         n = len(x_values)
         if n != len(y_values):
             raise ValueError("x값의 수와 y값의 수는 같아야 합니다.")
     
-        # x, y, x^2, xy의 합을 계산합니다.
+        # x, y, x^2, xy의 합을 계산합니다.　　(x, y, x^2, xyの合計を計算)
+        
         sum_x = sum(x_values)
         sum_y = sum(y_values)
         sum_x_squared = sum(x ** 2 for x in x_values)
         sum_xy = sum(x * y for x, y in zip(x_values, y_values))
 
-        # 기울기 (m)와 y절편 (b)을 계산합니다.
+        # 기울기 (m)와 y절편 (b)을 계산합니다.　　(傾き　(m)と　y切片を計算)
         slope = (n * sum_xy - sum_x * sum_y) / (n * sum_x_squared - sum_x ** 2)
         y_intercept = (sum_y - slope * sum_x) / n
         #coefficients = np.polyfit(x_values, y_values, 1)
@@ -334,7 +335,7 @@ while True:
             except ValueError:
                 print("숫자를 입력하세요")
                 continue
-        while True:      #y값을 입력받는 코드
+        while True:      #y값을 입력받는 코드 (y値を入力するコード)
             try:
                 input_data = input("y값을 입력하세요(구분자: 공백 또는 쉼표)>> ")
                 y_values = [float(y) for y in input_data.replace(",", " ").split()]
@@ -354,8 +355,8 @@ while True:
         print("회귀직선: y의 예측값 =",y_intercept ,"+", slope, "x")
         regression_line = np.poly1d([slope, y_intercept])
 
-        plt.scatter(x_values, y_values)  # 데이터 산점도 그래프
-        plt.plot(x_values, regression_line(x_values), "r")  # 회귀직선 그래프
+        plt.scatter(x_values, y_values)  # 데이터 산점도 그래프 (データ　散布図　グラフ)
+        plt.plot(x_values, regression_line(x_values), "r")  # 회귀직선 그래프 (回帰直線 グラフ)
         plt.xlabel("x")
         plt.ylabel("y")
         plt.title("Regression Line")
