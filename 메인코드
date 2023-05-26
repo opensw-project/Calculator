@@ -8,22 +8,22 @@ import numpy as np
 import math
 
 class Calculator:   
-    def add(self, x, y):
+    def add(self, x, y): #덧셈
         return x + y
 
-    def subtract(self, x, y):
+    def subtract(self, x, y): #뺄셈
         return x - y
 
-    def multiply(self, x, y):
+    def multiply(self, x, y): 곱셈
         return x * y
 
-    def divide(self, x, y):
+    def divide(self, x, y): 나눗셈
         return x / y
 
-    def squared(self, x, y):
+    def squared(self, x, y): 제곱
         return x ** y
 
-    def modulo(self, x, y):
+    def modulo(self, x, y): #나머지
         return x % y
 
     def square_root(self, x):  #제곱근
