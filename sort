@@ -1,0 +1,3 @@
+numbers = [4, 2, 1, 3, 5]
+numbers.sort()  # リストを昇順にソートする
+print(numbers)  # ソートされたリストを出力
