@@ -1,0 +1,8 @@
+import math
+
+exponent_input = float(input("지수를 입력하세요: "))
+base_input = float(input("밑을 입력하세요: "))
+
+result = math.pow(base_input, exponent_input)
+
+print("결과: ", result)
