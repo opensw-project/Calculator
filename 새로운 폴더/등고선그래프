@@ -1,0 +1,28 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# x, y 범위 설정
+x = np.linspace(-5, 5, 100)
+y = np.linspace(-5, 5, 100)
+
+# x, y에 대한 그리드 생성
+X, Y = np.meshgrid(x, y)
+
+# 등고선을 표현할 함수 정의
+Z = np.sin(np.sqrt(X**2 + Y**2))
+
+# 등고선 그래프 그리기
+plt.contour(X, Y, Z, levels=20, cmap='coolwarm')
+
+# 축 레이블 설정
+plt.xlabel('X')
+plt.ylabel('Y')
+
+# 그래프 제목 설정
+plt.title('Contour Plot')
+
+# 컬러 바 추가
+plt.colorbar()
+
+# 그래프 출력
+plt.show()
