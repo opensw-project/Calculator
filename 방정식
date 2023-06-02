@@ -1,0 +1,6 @@
+import sympy as sp
+
+equation_input = input("방정식을 입력하세요: ")
+
+x = sp.symbols('x')
+equation = sp.sympify(equation_input)
