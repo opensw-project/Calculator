@@ -1,0 +1,4 @@
+num = -5
+absolute_value = abs(num)
+
+print("절대값:", absolute_value)
