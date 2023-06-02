@@ -1,0 +1,12 @@
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# 팩토리얼 계산
+number = 5
+result = factorial(number)
+
+# 결과 출력
+print(result)
