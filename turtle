@@ -1,0 +1,17 @@
+mport turtle
+
+def draw_star():
+    # Turtleの設定
+    turtle.speed(2)
+    turtle.color("blue")
+
+    # 星を描く
+    for _ in range(5):
+        turtle.forward(100)
+        turtle.right(144)
+
+    # Turtleウィンドウを開いたままにする
+    turtle.done()
+
+# 関数を呼び出して星を描く
+draw_star()
