@@ -1,0 +1,23 @@
+import math
+
+def calculate_trigonometry(angle, trig_function):
+if trig_function == "sin":
+result = math.sin(math.radians(angle))
+elif trig_function == "cos":
+result = math.cos(math.radians(angle))
+elif trig_function == "tan":
+result = math.tan(math.radians(angle))
+else:
+raise ValueError("잘못된 삼각함수입니다.")
+return result
+
+while True:
+try:
+angle_input = float(input("각도를 입력하세요 (종료하려면 q를 입력하세요): "))
+if angle_input == 'q':
+break
+trig_function_input = input("삼각함수를 입력하세요 (sin, cos, tan): ")
+result = calculate_trigonometry(angle_input, trig_function_input)
+print("결과: ", result)
+except ValueError as e:
+print(str(e))
