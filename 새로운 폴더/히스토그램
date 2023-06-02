@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt
+
+data = [1, 3, 2, 1, 4, 3, 2, 1, 1, 2, 3, 4, 2, 1, 2, 3, 4]
+
+plt.hist(data, bins=5)  # 데이터와 구간(bin) 개수 설정
+plt.xlabel('Value')  # x축 레이블 설정
+plt.ylabel('Frequency')  # y축 레이블 설정
+plt.title('Histogram')  # 플롯 제목 설정
+plt.show()  # 히스토그램 출력
