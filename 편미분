@@ -1,0 +1,17 @@
+from sympy import symbols, diff
+
+def calculate_partial_derivative(expression, variables):.
+symbols_list = symbols(variables)
+expr = expression
+
+partial_derivatives = [diff(expr, symbol) for symbol in symbols_list]
+return partial_derivatives
+expr_str = input("함수를 입력하세요: ")
+
+var_str = input("변수들을 입력하세요 (여러 개의 변수는 공백으로 구분): ")
+
+partial_derivative_results = calculate_partial_derivative(expr_str, var_str)
+
+for i in range(len(partial_derivative_results)):
+print(f"편미분 결과 (변수 {var_str.split()[i]}):", partial_derivative_results[i])
+
