@@ -109,13 +109,18 @@ class Calculator:
         #coefficients = np.polyfit(x_values, y_values, 1)
         #p = np.poly1d(coefficients)
         return slope, y_intercept
+    
+    def RIC(D, H, W):       # 대각 길이와 높이, 너비의 비율알때, 높이와 너비 cm 반환.
+        r = (D**2 / (H**2 + W**2))**0.5
+        return int(r*W), int(r*H)
+        
 
 
 
 cal = Calculator()
 print("계산 가능한 연산 목록")
 print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  제곱근(√)  분산 표준편차 시간계산(h:m:s)  지수(e)")  
-print("사인(sin)  코사인(cos)  탄젠트(tan)  역사인(asin)  코사인(acos)  탄젠트(atan)  행렬식(det)")
+print("사인(sin)  코사인(cos)  탄젠트(tan)  역사인(asin)  코사인(acos)  탄젠트(atan)  행렬식(det)   비율->cm(RIC)")
 
 
 
@@ -368,6 +373,20 @@ while True:
         plt.title("Regression Line")
         plt.show()
         
+    elif choice == '비율->cm' or choice == 'RIC':
+        while True:
+            try:
+                D = int(input('대각의 길이: '))
+                H = int(input('높이의 비율 입력: ')
+                W = int(input('너비의 비율 입력: ')
+                break
+            
+            except ValueError:
+                print("다시 입력!!")
+                continue
+        
+        width, height = cal.RIC(D, H, W)
+        print('가로길이:', width, '세로길이:', height)
         
     elif choice == '종료':
         print("사용종료")
