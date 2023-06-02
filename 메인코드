@@ -3,9 +3,9 @@
 
 # In[ ]:
 
-import matplotlib.pyplot as plt
-import numpy as np
-import math
+import matplotlib.pyplot as plt  #matplotlib라이브러리
+import numpy as np    #넘파이라이브러리
+import math    #math모듈
 
 class Calculator:   
     def add(self, x, y): #덧셈　(足し算)
