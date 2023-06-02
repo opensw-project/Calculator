@@ -3,9 +3,9 @@
 
 # In[ ]:
 
-import matplotlib.pyplot as plt  #matplotlib라이브러리
-import numpy as np    #넘파이라이브러리
-import math    #math모듈
+import matplotlib.pyplot as plt  #matplotlib라이브러리 (matplotlibライブラリ)
+import numpy as np    #넘파이라이브러리　(numpyライブラリ)
+import math    #math모듈　(mathモジュール)
 
 class Calculator:   
     def add(self, x, y): #덧셈　(足し算)
@@ -110,7 +110,7 @@ class Calculator:
         #p = np.poly1d(coefficients)
         return slope, y_intercept
     
-    def RIC(D, H, W):       # 대각 길이와 높이, 너비의 비율알때, 높이와 너비 cm 반환.
+    def RIC(D, H, W):       # 대각 길이와 높이, 너비의 비율알때, 높이와 너비 cm 반환. (対角　長さと高さ、cm변환)
         r = (D**2 / (H**2 + W**2))**0.5
         return int(r*W), int(r*H)
         
