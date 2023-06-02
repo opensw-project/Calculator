@@ -1,0 +1,49 @@
+def complement_set(A, universe):
+    """
+    집합 A의 여집합을 계산하는 함수
+    """
+    complement = []
+    for element in universe:
+        if element not in A:
+            complement.append(element)
+    return complement
+
+def union_sets(A, B):
+    """
+    두 집합 A와 B의 합집합을 계산하는 함수
+    """
+    union = A.copy()
+    for element in B:
+        if element not in union:
+            union.append(element)
+    return union
+
+def intersection_sets(A, B):
+    """
+    두 집합 A와 B의 교집합을 계산하는 함수
+    """
+    intersection = []
+    for element in A:
+        if element in B:
+            intersection.append(element)
+    return intersection
+
+def demorgans_law(A, B, universe):
+    """
+    도모르간의 법칙을 적용하는 함수
+    """
+    complement_union = complement_set(union_sets(A, B), universe)
+    complement_intersection = complement_set(intersection_sets(A, B), universe)
+    return complement_union, complement_intersection
+
+# 테스트용 집합과 전체 집합 정의
+A = [1, 2, 3]
+B = [2, 3, 4]
+universe = [1, 2, 3, 4, 5]
+
+# 도모르간의 법칙 적용
+complement_union, complement_intersection = demorgans_law(A, B, universe)
+
+# 결과 출력
+print("합집합 여집합: ", complement_union)
+print("교집합 여집합: ", complement_intersection)
