@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+
+# 데이터
+labels = ['A', 'B', 'C', 'D']
+sizes = [30, 25, 20, 25]  # 각 항목의 비율
+
+# 원 그래프 그리기
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+plt.axis('equal')  # 가로세로 비율을 동일하게 조정
+plt.title('Pie Chart')
+
+plt.show()  # 그래프 출력
