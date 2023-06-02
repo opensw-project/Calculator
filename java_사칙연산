@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("演算子を選んでください（+、-、*、/）：");
+        String operator = scanner.nextLine();
+
+        System.out.println("最初の数値を入力してください：");
+        double operand1 = scanner.nextDouble();
+
+        System.out.println("次の数値を入力してください：");
+        double operand2 = scanner.nextDouble();
+
+        double result;
+
+        switch (operator) {
+            case "+":
+                result = operand1 + operand2;
+                System.out.println("結果：" + result);
+                break;
+            case "-":
+                result = operand1 - operand2;
+                System.out.println("結果：" + result);
+                break;
+            case "*":
+                result = operand1 * operand2;
+                System.out.println("結果：" + result);
+                break;
+            case "/":
+                if (operand2 != 0) {
+                    result = operand1 / operand2;
+                    System.out.println("結果：" + result);
+                } else {
+                    System.out.println("0で割ることはできません。");
+                }
+                break;
+            default:
+                System.out.println("無効な演算子です。");
+                break;
+        }
+    }
+}
