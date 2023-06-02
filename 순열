@@ -1,0 +1,9 @@
+import itertools
+
+def calculate_permutations(elements):
+permutations = list(itertools.permutations(elements))
+return permutations
+
+while True:
+try:
+elements_input = input("요소들을 입력하세요 (종료하려면 q를 입력하세요): ")
