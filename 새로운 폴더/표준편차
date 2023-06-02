@@ -1,0 +1,6 @@
+import numpy as np
+
+data = np.array([2, 4, 6, 8, 10])
+standard_deviation = np.std(data)
+
+print("표준편차:", standard_deviation)
