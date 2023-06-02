@@ -1,0 +1,20 @@
+import math
+
+# 삼각 함수 계산
+print(math.sin(math.pi / 2))  # 1.0
+print(math.cos(math.pi))      # -1.0
+
+# 로그 함수 계산
+print(math.log(10))      # 2.302585092994046
+print(math.log10(100))   # 2.0
+
+# 지수 함수 계산
+print(math.exp(1))       # 2.718281828459045
+print(math.pow(2, 3))    # 8.0
+
+# 제곱근 계산
+print(math.sqrt(25))     # 5.0
+
+# 수학 상수 사용
+print(math.pi)           # 3.141592653589793
+print(math.e)            # 2.718281828459045
