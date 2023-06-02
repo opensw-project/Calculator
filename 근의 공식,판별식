@@ -1,0 +1,15 @@
+mport cmath
+
+def quadratic_formula():
+a = float(input("이차 방정식의 계수 a를 입력하세요: "))
+b = float(input("이차 방정식의 계수 b를 입력하세요: "))
+c = float(input("이차 방정식의 계수 c를 입력하세요: "))
+
+# 판별식 계산
+discriminant = (b ** 2) - (4 * a * c)
+
+# 근의 공식 계산
+root1 = (-b + cmath.sqrt(discriminant)) / (2 * a)
+root2 = (-b - cmath.sqrt(discriminant)) / (2 * a)
+
+return root1, root2
