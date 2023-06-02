@@ -1,0 +1,4 @@
+numbers = [5, 2, 8, 1, 9, 3]
+minimum = min(numbers)
+
+print("최소값:", minimum)
