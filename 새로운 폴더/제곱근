@@ -1,0 +1,8 @@
+import math
+
+# 제곱근 계산
+number = 16
+result = math.sqrt(number)
+
+# 결과 출력
+print(result)
