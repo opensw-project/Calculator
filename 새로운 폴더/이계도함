@@ -1,0 +1,16 @@
+import sympy as sp
+
+def second_derivative():
+x = sp.Symbol('x')
+f = input("함수 f(x)를 입력하세요: ")
+
+# f(x)를 sympy 심볼로 변환
+f_expr = sp.sympify(f)
+
+# 이계도함수 계산
+f_double_prime = sp.diff(f_expr, x, 2)
+
+return f_double_prime
+result = second_derivative()
+print("이계도함수:")
+print(result)
