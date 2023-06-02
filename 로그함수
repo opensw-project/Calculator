@@ -1,0 +1,16 @@
+import math
+
+def calculate_logarithm(base, number):
+result = math.log(number, base)
+return result
+
+while True:
+try:
+base_input = float(input("밑을 입력하세요 (종료하려면 q를 입력하세요): "))
+if base_input == 'q':
+break
+number_input = float(input("로그를 적용할 수를 입력하세요: "))
+result = calculate_logarithm(base_input, number_input)
+print("결과: ", result)
+except ValueError:
+print("잘못된 입력입니다. 다시 시도해주세요.")
