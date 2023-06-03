@@ -1,0 +1,10 @@
+def evaluate_proposition(proposition):
+    result = eval(proposition)
+    return result
+
+# 사용자로부터 명제를 입력받습니다.
+proposition = input("명제를 입력하세요: ")
+
+# 명제 계산
+result = evaluate_proposition(proposition)
+print(f"명제 계산 결과: {result}")
