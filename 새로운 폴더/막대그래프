@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+
+# x, y 데이터 생성
+x = ['A', 'B', 'C', 'D', 'E']
+y = [10, 7, 5, 3, 8]
+
+# 그래프 그리기
+plt.bar(x, y)
+
+# 그래프 타이틀과 축 레이블 설정
+plt.title("Bar Graph")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+
+# 그래프 보여주기
+plt.show()
