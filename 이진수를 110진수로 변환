@@ -1,0 +1,4 @@
+# 이진수를 10진수로 변환
+binary = input("이진수를 입력하세요: ")
+decimal = binary_to_decimal(binary)
+print(f"10진수 변환 결과: {decimal}")
