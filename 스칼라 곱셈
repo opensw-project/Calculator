@@ -1,0 +1,5 @@
+# 스칼라 곱셈
+scalar = 2
+result = scalar_multiply(matrix1, scalar)
+print("스칼라 곱셈 결과:")
+print(result)
