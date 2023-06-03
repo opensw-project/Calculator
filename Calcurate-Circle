@@ -1,0 +1,20 @@
+import math
+
+def calculate_circle(radius):
+    # 원의 면적 계산
+    area = math.pi * radius**2
+
+    # 원의 둘레 계산
+    circumference = 2 * math.pi * radius
+
+    return area, circumference
+
+# 반지름 입력
+radius = float(input("원의 반지름을 입력하세요: "))
+
+# 원의 면적과 둘레 계산
+circle_area, circle_circumference = calculate_circle(radius)
+
+# 결과 출력
+print("원의 면적:", circle_area)
+print("원의 둘레:", circle_circumference)
