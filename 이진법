@@ -1,0 +1,12 @@
+def decimal_to_binary(decimal):
+    binary = bin(decimal).replace("0b", "")
+    return binary
+
+def binary_to_decimal(binary):
+    decimal = int(binary, 2)
+    return decimal
+
+# 10진수를 이진수로 변환
+decimal = int(input("10진수를 입력하세요: "))
+binary = decimal_to_binary(decimal)
+print(f"이진수 변환 결과: {binary}")
