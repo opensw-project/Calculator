@@ -1,0 +1,54 @@
+def maze_solver(maze, start_row, start_col, goal_row, goal_col):
+    # 迷路の行数と列数
+    rows = len(maze)
+    cols = len(maze[0])
+
+    # 移動方向 (上、右、下、左)
+    directions = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+
+    # 経路を保存するスタック
+    stack = [(start_row, start_col, [])]
+
+    while stack:
+        row, col, path = stack.pop()
+
+        # ゴールに到達した場合、経路を返す
+        if row == goal_row and col == goal_col:
+            return path + [(row, col)]
+
+        # 現在位置を通路としてマーク
+        maze[row][col] = 1
+
+        # 4方向に移動を試みる
+        for drow, dcol in directions:
+            new_row = row + drow
+            new_col = col + dcol
+
+            # 新しい位置が迷路内であり、通行可能である場合、スタックに追加
+            if 0 <= new_row < rows and 0 <= new_col < cols and maze[new_row][new_col] == 0:
+                stack.append((new_row, new_col, path + [(row, col)]))
+
+    # ゴールに到達できない場合、Noneを返す
+    return None
+
+# テスト用の迷路
+maze = [
+    [0, 1, 0, 0, 0],
+    [0, 1, 0, 1, 0],
+    [0, 0, 0, 0, 0],
+    [0, 1, 1, 1, 0],
+    [0, 0, 0, 1, 0],
+]
+
+start_row, start_col = 0, 0
+goal_row, goal_col = 4, 4
+
+# 迷路探索の実行
+path = maze_solver(maze, start_row, start_col, goal_row, goal_col)
+
+if path:
+    print("ゴールまでの経路:")
+    for row, col in path:
+        print(f"({row}, {col})")
+else:
+    print("ゴールに到達できませんでした。")
