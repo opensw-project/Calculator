@@ -1,0 +1,16 @@
+import numpy as np
+
+# 사용자로부터 계수 a, b, c, d, e 값을 입력받습니다.
+a = float(input("a 값을 입력하세요: "))
+b = float(input("b 값을 입력하세요: "))
+c = float(input("c 값을 입력하세요: "))
+d = float(input("d 값을 입력하세요: "))
+e = float(input("e 값을 입력하세요: "))
+
+x = float(input("x 값을 입력하세요: "))
+
+coefficients = [a, b, c, d, e]
+
+result = np.polyval(coefficients, x)
+
+print("방정식 값은:", result)
