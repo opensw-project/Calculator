@@ -1,0 +1,29 @@
+def calculate_deviation(score, mean, std_dev):
+    deviation = (score - mean) / std_dev * 10 + 50
+    return deviation
+
+def calculate_mean(scores):
+    total = sum(scores)
+    mean = total / len(scores)
+    return mean
+
+def calculate_std_dev(scores, mean):
+    deviations = [(x - mean) ** 2 for x in scores]
+    variance = sum(deviations) / len(scores)
+    std_dev = variance ** 0.5
+    return std_dev
+
+# テストスコアのリスト
+test_scores = [85, 90, 92, 88, 75, 80, 95, 85, 78, 82]
+
+# 平均値と標準偏差の計算
+mean = calculate_mean(test_scores)
+std_dev = calculate_std_dev(test_scores, mean)
+
+# 各スコアの偏差値の計算
+deviation_scores = [calculate_deviation(score, mean, std_dev) for score in test_scores]
+
+# 結果の表示
+for i, score in enumerate(test_scores):
+    deviation = deviation_scores[i]
+    print(f"スコア: {score}  偏差値: {deviation}")
