@@ -1,0 +1,5 @@
+import numpy as np
+
+# 0부터 9 사이의 정수형 난수 생성
+random_integer = np.random.randint(0, 10)
+print(random_integer)
