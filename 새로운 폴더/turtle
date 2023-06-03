@@ -1,0 +1,41 @@
+import turtle
+import random
+
+# 描画ウィンドウの設定
+screen = turtle.Screen()
+screen.bgcolor("black")
+
+# Turtleの設定
+t = turtle.Turtle()
+t.shape("circle")
+t.speed(0)  # 最速の描画速度
+
+# アニメーションのフレーム数
+num_frames = 100
+
+# 円を描画しアニメーションする
+for _ in range(num_frames):
+    # ランダムな位置と半径の円を描画
+    x = random.randint(-200, 200)
+    y = random.randint(-200, 200)
+    radius = random.randint(10, 100)
+
+    # ランダムな色の設定
+    red = random.random()
+    green = random.random()
+    blue = random.random()
+    t.color(red, green, blue)
+
+    # 円を描画
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.circle(radius)
+
+    # ランダムな方向に移動
+    angle = random.randint(0, 360)
+    t.setheading(angle)
+    t.forward(50)
+
+# 描画終了
+turtle.done()
