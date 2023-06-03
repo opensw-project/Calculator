@@ -1,0 +1,7 @@
+numbers = [5, 2, 8, 1, 9, 3]
+
+max_value = max(numbers)  # 최댓값 찾기
+min_value = min(numbers)  # 최솟값 찾기
+
+print("최댓값:", max_value)
+print("최솟값:", min_value)
