@@ -1,0 +1,30 @@
+import heapq
+
+def dijkstra(graph, start):
+    n = len(graph)  # ノードの数
+    distances = [float('inf')] * n  # 初期距離を無限大で初期化
+    distances[start] = 0  # 始点の距離を0に設定
+
+    # 優先度キューの初期化と始点を追加
+    pq = [(0, start)]
+
+    while pq:
+        # 最短距離のノードを取り出す
+        dist, node = heapq.heappop(pq)
+
+        # 現在のノードからの距離が既に計算済みの距離よりも大きければスキップ
+        if dist > distances[node]:
+            continue
+
+        # 隣接ノードを順番に探索
+        for neighbor, weight in graph[node]:
+            # 始点から隣接ノードへの仮の距離を計算
+            new_dist = dist + weight
+
+            # 仮の距離が現在の距離よりも短ければ更新
+            if new_dist < distances[neighbor]:
+                distances[neighbor] = new_dist
+                # 更新された距離と隣接ノードを優先度キューに追加
+                heapq.heappush(pq, (new_dist, neighbor))
+
+    return distances
