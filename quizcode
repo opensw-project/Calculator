@@ -1,0 +1,41 @@
+class Quiz:
+    def __init__(self, question, choices, correct_answer):
+        self.question = question
+        self.choices = choices
+        self.correct_answer = correct_answer
+
+    def display_question(self):
+        print(self.question)
+        for i, choice in enumerate(self.choices):
+            print(f"{i+1}. {choice}")
+
+    def check_answer(self, user_choice):
+        correct_choice = self.choices[self.correct_answer]
+        if user_choice == correct_choice:
+            return True
+        else:
+            return False
+
+
+# クイズのリストを作成
+quizzes = [
+    Quiz("次のうち、最初のプログラミング言語は何ですか？", ["A. Python", "B. C", "C. Java", "D. Fortran"], 3),
+    Quiz("Pythonの作者は誰ですか？", ["A. Guido van Rossum", "B. James Gosling", "C. Larry Page", "D. Mark Zuckerberg"], 1),
+    Quiz("HTMLはどのような役割を果たす言語ですか？", ["A. プログラミング言語", "B. データベース言語", "C. マークアップ言語", "D. スクリプト言語"], 3)
+]
+
+# クイズを実行する関数
+def run_quiz(quiz):
+    quiz.display_question()
+    user_choice = input("選択肢の番号を入力してください: ")
+    if quiz.check_answer(user_choice):
+        print("正解です！")
+    else:
+        print("不正解です！")
+
+# クイズを実行
+for quiz in quizzes:
+    run_quiz(quiz)
+    print()
+
+print("クイズ終了")
