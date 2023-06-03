@@ -1,0 +1,7 @@
+def convert_distance(miles):
+    kilometers = miles * 1.60934
+    return kilometers
+
+num = float(input('거리(마일)를 입력:)
+
+print(convert_distance(num))
