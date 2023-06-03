@@ -1,0 +1,17 @@
+def fibonacci(n):
+    memo = [0] * (n + 1)
+    return fibonacci_helper(n, memo)
+
+def fibonacci_helper(n, memo):
+    if n <= 1:
+        return n
+    
+    if memo[n] != 0:
+        return memo[n]
+    
+    memo[n] = fibonacci_helper(n - 1, memo) + fibonacci_helper(n - 2, memo)
+    return memo[n]
+
+n = 10
+result = fibonacci(n)
+print(f"フィボナッチ数列の第{n}項は: {result}")
