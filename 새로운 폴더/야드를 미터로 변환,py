@@ -1,0 +1,6 @@
+def convert_yard_to_meter(yard):
+    meter = yard * 0.9144
+    return meter
+num = float(input('야드를 입력 :')
+
+print(convert_yard_to_meter(num))
