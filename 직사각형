@@ -1,0 +1,24 @@
+import math
+
+def calculate_rectangle_area(width, height):
+    return width * height
+
+def calculate_rectangle_perimeter(width, height):
+    return 2 * (width + height)
+
+def calculate_circle_area(radius):
+    return math.pi * radius ** 2
+
+def calculate_circle_circumference(radius):
+    return 2 * math.pi * radius
+
+# 직사각형 계산
+width = float(input("직사각형의 가로 길이를 입력하세요: "))
+height = float(input("직사각형의 세로 길이를 입력하세요: "))
+
+rectangle_area = calculate_rectangle_area(width, height)
+rectangle_perimeter = calculate_rectangle_perimeter(width, height)
+
+print("직사각형 계산 결과:")
+print(f"면적: {rectangle_area}")
+print(f"둘레: {rectangle_perimeter}")
