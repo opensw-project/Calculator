@@ -1,0 +1,27 @@
+import random
+
+def encrypt(message, key):
+    encrypted_message = ""
+    for char in message:
+        if char.isalpha():
+            # 문자가 알파벳인 경우에만 암호화 수행
+            ascii_offset = ord('a') if char.islower() else ord('A')
+            shifted_ascii = (ord(char) - ascii_offset + key) % 26 + ascii_offset
+            encrypted_message += chr(shifted_ascii)
+        else:
+            # 알파벳이 아닌 문자는 그대로 유지
+            encrypted_message += char
+    return encrypted_message
+
+# 암호화할 메시지 입력 받기
+message = input("암호화할 메시지를 입력하세요: ")
+
+# 암호화에 사용할 키 값 생성
+key = random.randint(1, 25)
+
+# 암호화 수행
+encrypted_message = encrypt(message, key)
+
+# 결과 출력
+print("암호화된 메시지:", encrypted_message)
+print("키 값:", key)
