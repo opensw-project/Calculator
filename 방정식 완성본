@@ -1,0 +1,8 @@
+solutions = sp.solve(equation, x)
+
+if len(solutions) == 0:
+print("해가 존재하지 않습니다.")
+else:
+print("해: ")
+for solution in solutions:
+print(solution)
