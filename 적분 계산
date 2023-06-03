@@ -1,0 +1,17 @@
+
+from scipy import integrate
+
+def integrand(x):
+
+return x**2
+def calculate_integral(a, b):
+
+result, error = integrate.quad(integrand, a, b)
+return result
+a = float(input("적분 구간의 시작 값을 입력하세요: "))
+b = float(input("적분 구간의 끝 값을 입력하세요: "))
+
+.integral_result = calculate_integral(a, b)
+
+print("적분 결과:", integral_result)
+
