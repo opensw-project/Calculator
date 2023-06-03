@@ -1,0 +1,4 @@
+import datetime
+
+current_time = datetime.datetime.now()
+print("現在の時刻:", current_time)
