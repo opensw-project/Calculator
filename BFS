@@ -1,0 +1,48 @@
+from collections import deque
+
+def maze_solver(maze, start_row, start_col, goal_row, goal_col):
+    rows = len(maze)
+    cols = len(maze[0])
+
+    directions = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+
+    queue = deque([(start_row, start_col, [])])
+
+    while queue:
+        row, col, path = queue.popleft()
+
+        if row == goal_row and col == goal_col:
+            return path + [(row, col)]
+
+        maze[row][col] = 1
+
+        for drow, dcol in directions:
+            new_row = row + drow
+            new_col = col + dcol
+
+            if 0 <= new_row < rows and 0 <= new_col < cols and maze[new_row][new_col] == 0:
+                queue.append((new_row, new_col, path + [(row, col)]))
+
+    return None
+
+# テスト用の迷路
+maze = [
+    [0, 1, 0, 0, 0],
+    [0, 1, 0, 1, 0],
+    [0, 0, 0, 0, 0],
+    [0, 1, 1, 1, 0],
+    [0, 0, 0, 1, 0],
+]
+
+start_row, start_col = 0, 0
+goal_row, goal_col = 4, 4
+
+# 迷路探索の実行
+path = maze_solver(maze, start_row, start_col, goal_row, goal_col)
+
+if path:
+    print("ゴールまでの経路:")
+    for row, col in path:
+        print(f"({row}, {col})")
+else:
+    print("ゴールに到達できませんでした。"）
