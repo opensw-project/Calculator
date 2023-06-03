@@ -1,0 +1,5 @@
+import numpy as np
+
+# 0부터 1 사이의 난수 생성
+random_number = np.random.rand()
+print(random_number)
