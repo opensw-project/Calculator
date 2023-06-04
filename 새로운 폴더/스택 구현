@@ -1,0 +1,41 @@
+class Stack:
+    def __init__(self):
+        self.stack = []
+
+    def push(self, item):
+        self.stack.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.stack.pop()
+        else:
+            print("스택이 비어있습니다.")
+
+    def peek(self):
+        if not self.is_empty():
+            return self.stack[-1]
+        else:
+            print("스택이 비어있습니다.")
+
+    def is_empty(self):
+        return len(self.stack) == 0
+
+    def size(self):
+        return len(self.stack)
+
+
+# 스택 사용 예시
+stack = Stack()
+
+stack.push(10)
+stack.push(20)
+stack.push(30)
+
+print("스택 크기:", stack.size())
+print("스택이 비어있는가?", stack.is_empty())
+print("스택의 top 요소:", stack.peek())
+
+popped_item = stack.pop()
+print("pop된 요소:", popped_item)
+
+print("스택의 top 요소:", stack.peek())
