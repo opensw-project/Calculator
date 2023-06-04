@@ -1,0 +1,26 @@
+import numpy as np
+
+def add_matrices(matrix1, matrix2):
+    return np.add(matrix1, matrix2)
+
+def subtract_matrices(matrix1, matrix2):
+    return np.subtract(matrix1, matrix2)
+
+def multiply_matrices(matrix1, matrix2):
+    return np.matmul(matrix1, matrix2)
+
+def scalar_multiply(matrix, scalar):
+    return np.multiply(matrix, scalar)
+
+def transpose_matrix(matrix):
+    return np.transpose(matrix)
+
+# 예시 행렬
+matrix1 = np.array([[1, 2], [3, 4]])
+matrix2 = np.array([[5, 6], [7, 8]])
+
+# 행렬 덧셈
+result = add_matrices(matrix1, matrix2)
+print("행렬 덧셈 결과:")
+print(result)
+
