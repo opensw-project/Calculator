@@ -1,0 +1,4 @@
+# 행렬 뺄셈
+result = subtract_matrices(matrix1, matrix2)
+print("행렬 뺄셈 결과:")
+print(result)
