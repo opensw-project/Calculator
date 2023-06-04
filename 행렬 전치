@@ -1,0 +1,4 @@
+# 행렬 전치
+result = transpose_matrix(matrix1)
+print("행렬 전치 결과:")
+print(result)
