@@ -1,0 +1,37 @@
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    return a / b
+
+# 연산자와 연산 함수 매핑
+operators = {
+    '+': add,
+    '-': subtract,
+    '*': multiply,
+    '/': divide
+}
+
+# 계산 함수
+def calculate(operator, a, b):
+    if operator in operators:
+        operation = operators[operator]
+        result = operation(a, b)
+        return result
+    else:
+        print("지원하지 않는 연산자입니다.")
+        return None
+
+# 계산 예시
+operator = '+'
+operand1 = 5
+operand2 = 3
+
+result = calculate(operator, operand1, operand2)
+print(f"{operand1} {operator} {operand2} = {result}")
