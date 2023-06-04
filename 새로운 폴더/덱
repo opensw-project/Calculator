@@ -1,0 +1,55 @@
+from collections import deque
+
+class Deque:
+    def __init__(self):
+        self.deque = deque()
+
+    def append(self, item):
+        self.deque.append(item)
+
+    def appendleft(self, item):
+        self.deque.appendleft(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.deque.pop()
+        else:
+            print("덱이 비어있습니다.")
+
+    def popleft(self):
+        if not self.is_empty():
+            return self.deque.popleft()
+        else:
+            print("덱이 비어있습니다.")
+
+    def peek(self):
+        if not self.is_empty():
+            return self.deque[0]
+        else:
+            print("덱이 비어있습니다.")
+
+    def is_empty(self):
+        return len(self.deque) == 0
+
+    def size(self):
+        return len(self.deque)
+
+
+# 덱 사용 예시
+deque = Deque()
+
+deque.append(10)
+deque.append(20)
+deque.appendleft(5)
+
+print("덱 크기:", deque.size())
+print("덱이 비어있는가?", deque.is_empty())
+print("덱의 첫 번째 요소:", deque.peek())
+
+pop_item = deque.pop()
+print("pop된 요소:", pop_item)
+
+popleft_item = deque.popleft()
+print("popleft된 요소:", popleft_item)
+
+print("덱의 첫 번째 요소:", deque.peek())
