@@ -1,0 +1,30 @@
+def infix_to_postfix(expression):
+    precedence = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
+    postfix = []
+    stack = []
+
+    for token in expression:
+        if token.isalnum():
+            postfix.append(token)
+        elif token == '(':
+            stack.append(token)
+        elif token == ')':
+            while stack and stack[-1] != '(':
+                postfix.append(stack.pop())
+            stack.pop()  # '(' 제거
+        else:  # 연산자인 경우
+            while stack and stack[-1] != '(' and precedence[token] <= precedence.get(stack[-1], 0):
+                postfix.append(stack.pop())
+            stack.append(token)
+
+    while stack:
+        postfix.append(stack.pop())
+
+    return postfix
+
+# 중위 표기법 식 입력
+expression = input("중위 표기법 식을 입력하세요: ").split()
+
+# 후위 표기법으로 변환
+postfix_expression = infix_to_postfix(expression)
+print("후위 표기법 식:", ' '.join(postfix_expression))
