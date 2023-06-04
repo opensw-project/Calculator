@@ -1,0 +1,5 @@
+
+# 행렬 곱셈
+result = multiply_matrices(matrix1, matrix2)
+print("행렬 곱셈 결과:")
+print(result)
