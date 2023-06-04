@@ -1,0 +1,9 @@
+# 원 계산
+radius = float(input("원의 반지름을 입력하세요: "))
+
+circle_area = calculate_circle_area(radius)
+circle_circumference = calculate_circle_circumference(radius)
+
+print("원 계산 결과:")
+print(f"면적: {circle_area}")
+print(f"둘레: {circle_circumference}")
