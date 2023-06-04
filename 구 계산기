@@ -1,0 +1,18 @@
+import math
+
+def calculate_sphere_volume(radius):
+    return (4/3) * math.pi * radius**3
+
+def calculate_sphere_surface_area(radius):
+    return 4 * math.pi * radius**2
+
+# 사용자로부터 반지름 값을 입력받습니다.
+radius = float(input("구의 반지름을 입력하세요: "))
+
+# 구의 부피와 표면적 계산
+sphere_volume = calculate_sphere_volume(radius)
+sphere_surface_area = calculate_sphere_surface_area(radius)
+
+print("구 계산 결과:")
+print(f"부피: {sphere_volume}")
+print(f"표면적: {sphere_surface_area}")
