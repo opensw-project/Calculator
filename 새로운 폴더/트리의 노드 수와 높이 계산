@@ -1,0 +1,4 @@
+# 트리의 노드 개수와 높이(깊이) 계산
+count, height = get_tree_info(root)
+print("트리의 노드 개수:", count)
+print("트리의 높이(깊이):", height)
