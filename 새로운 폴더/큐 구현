@@ -1,0 +1,41 @@
+class Queue:
+    def __init__(self):
+        self.queue = []
+
+    def enqueue(self, item):
+        self.queue.append(item)
+
+    def dequeue(self):
+        if not self.is_empty():
+            return self.queue.pop(0)
+        else:
+            print("큐가 비어있습니다.")
+
+    def peek(self):
+        if not self.is_empty():
+            return self.queue[0]
+        else:
+            print("큐가 비어있습니다.")
+
+    def is_empty(self):
+        return len(self.queue) == 0
+
+    def size(self):
+        return len(self.queue)
+
+
+# 큐 사용 예시
+queue = Queue()
+
+queue.enqueue(10)
+queue.enqueue(20)
+queue.enqueue(30)
+
+print("큐 크기:", queue.size())
+print("큐가 비어있는가?", queue.is_empty())
+print("큐의 front 요소:", queue.peek())
+
+dequeued_item = queue.dequeue()
+print("dequeue된 요소:", dequeued_item)
+
+print("큐의 front 요소:", queue.peek())
