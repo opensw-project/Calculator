@@ -1,0 +1,14 @@
+# ラムダ式の基本構文
+lambda arguments: expression
+
+# 2つの引数を受け取り、それらを足し合わせるラムダ式
+addition = lambda x, y: x + y
+
+# ラムダ式を使用して計算を行う
+result = addition(5, 3)
+print(result)  # 結果: 8
+
+# ラムダ式を使用してリストの要素を2倍にする
+numbers = [1, 2, 3, 4, 5]
+doubled_numbers = list(map(lambda x: x * 2, numbers))
+print(doubled_numbers)  # 結果: [2, 4, 6, 8, 10]
