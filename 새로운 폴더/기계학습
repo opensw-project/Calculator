@@ -1,0 +1,25 @@
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+
+# データセットの読み込み
+# Xは入力特徴量、yは目標値
+X = [[1], [2], [3], [4], [5]]
+y = [2, 4, 6, 8, 10]
+
+# データセットをトレーニングセットとテストセットに分割
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# 線形回帰モデルのインスタンス化と訓練
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# テストデータの予測
+y_pred = model.predict(X_test)
+
+# 平均二乗誤差の計算
+mse = mean_squared_error(y_test, y_pred)
+
+# 結果の表示
+print("予測値:", y_pred)
+print("平均二乗誤差:", mse)
