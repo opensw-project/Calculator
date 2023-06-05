@@ -1,0 +1,14 @@
+ def calculate_arithmetic_series(first_term, common_difference, n):
+    series = []
+    current_term = first_term
+    for _ in range(n):
+        series.append(current_term)
+        current_term += common_difference
+    return series
+
+# 사용 예시
+first_term = 2
+common_difference = 3
+n = 5
+result = calculate_arithmetic_series(first_term, common_difference, n)
+print(result)  # 출력: [2, 5, 8, 11, 14]
