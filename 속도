@@ -1,0 +1,10 @@
+def calculate_speed(distance, time):
+    speed = distance / time
+    return speed
+
+# 사용 예시
+distance = 100  # 거리 (단위: km)
+time = 2  # 시간 (단위: 시간)
+
+speed = calculate_speed(distance, time)
+print(speed)  # 출력: 50.0 (단위: km/h)
