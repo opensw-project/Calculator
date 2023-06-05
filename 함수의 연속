@@ -1,0 +1,29 @@
+from sympy import Symbol, limit, oo, S, solve
+
+def is_continuous(f, x, interval):
+    # 함수의 정의 범위 확인
+    if any(not interval.contains(p) for p in f.free_symbols):
+        return False
+
+    # 극한 계산
+    left_limit = limit(f, x, interval.start, dir="-")
+    right_limit = limit(f, x, interval.end, dir="+")
+
+    # 함수 값 확인
+    left_value = f.subs(x, interval.start)
+    right_value = f.subs(x, interval.end)
+
+    # 극한과 함수 값이 일치하는지 확인
+    if left_limit != left_value or right_limit != right_value:
+        return False
+
+    return True
+
+# 사용 예시
+x = Symbol('x')
+f = 2 * x + 3
+
+interval = S.Reals  # 실수 전체 구간
+
+continuous = is_continuous(f, x, interval)
+print(continuous)  # 출력: True
