@@ -1,0 +1,12 @@
+def bit_search(elements):
+    n = len(elements)
+    result = []
+
+    for i in range(2**n):  # 0から2^n-1までの数値を順に試す
+        subset = []
+        for j in range(n):
+            if (i >> j) & 1:  # iのjビット目が1かどうかをチェック
+                subset.append(elements[j])
+        result.append(subset)
+
+    return result
