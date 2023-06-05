@@ -1,0 +1,31 @@
+# 集合の作成
+set1 = {1, 2, 3, 4, 5}  # 波括弧を使用して要素を指定
+set2 = set([3, 4, 5, 6, 7])  # set()関数を使用して要素を指定
+
+# 要素の追加
+set1.add(6)  # add()メソッドで要素を追加
+
+# 要素の削除
+set1.remove(3)  # remove()メソッドで要素を削除
+
+# 集合の演算
+union_set = set1.union(set2)  # 和集合
+intersection_set = set1.intersection(set2)  # 積集合
+difference_set = set1.difference(set2)  # 差集合
+
+# 集合の反復処理
+for element in set1:
+    print(element)
+
+# 集合のサイズ
+size = len(set1)
+
+# 要素の存在チェック
+if 2 in set1:
+    print("2 is in the set.")
+
+# 空の集合の作成
+empty_set = set()
+
+# 集合のクリア
+set1.clear()
