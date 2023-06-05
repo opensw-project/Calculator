@@ -1,0 +1,11 @@
+def substitution_calculator(expression, substitutions):
+    for var, value in substitutions.items():
+        expression = expression.replace(var, str(value))
+    result = eval(expression)
+    return result
+
+# 사용 예시
+expression = "x + y - z"
+substitutions = {"x": 5, "y": 3, "z": 2}
+result = substitution_calculator(expression, substitutions)
+print(result)  # 출력: 6
