@@ -1,0 +1,14 @@
+def calculate_geometric_series(first_term, common_ratio, n):
+    series = []
+    current_term = first_term
+    for _ in range(n):
+        series.append(current_term)
+        current_term *= common_ratio
+    return series
+
+# 사용 예시
+first_term = 2
+common_ratio = 3
+n = 5
+result = calculate_geometric_series(first_term, common_ratio, n)
+print(result)  # 출력: [2, 6, 18, 54, 162]
