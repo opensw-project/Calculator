@@ -1,0 +1,55 @@
+import turtle
+
+# ウィンドウの設定
+window = turtle.Screen()
+window.bgcolor("white")
+
+# ペンの設定
+pen = turtle.Turtle()
+pen.color("red")
+pen.width(5)
+pen.speed(2)
+
+# Lの描画
+pen.penup()
+pen.goto(-100, 0)
+pen.pendown()
+pen.left(90)
+pen.forward(100)
+pen.right(90)
+pen.forward(50)
+
+# Oの描画
+pen.penup()
+pen.goto(0, 0)
+pen.pendown()
+pen.circle(50)
+
+# Vの描画
+pen.penup()
+pen.goto(100, 0)
+pen.pendown()
+pen.left(45)
+pen.forward(70)
+pen.right(90)
+pen.forward(70)
+
+# Eの描画
+pen.penup()
+pen.goto(200, 0)
+pen.pendown()
+pen.left(90)
+pen.forward(50)
+pen.right(90)
+pen.forward(50)
+pen.penup()
+pen.goto(200, -50)
+pen.pendown()
+pen.forward(50)
+pen.penup()
+pen.goto(200, -100)
+pen.pendown()
+pen.forward(50)
+
+# 描画の終了
+turtle.done()
