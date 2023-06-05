@@ -1,0 +1,8 @@
+from sympy import Symbol, limit, sin
+
+# 사용 예시
+x = Symbol('x')
+f = sin(x) / x
+
+limit_value = limit(f, x, 0)
+print(limit_value)  # 출력: 1
