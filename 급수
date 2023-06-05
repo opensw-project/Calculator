@@ -1,0 +1,18 @@
+def geometric_series_sum(a, r, n):
+    if abs(r) < 1:
+        return a * (1 - r**n) / (1 - r)
+    elif abs(r) > 1:
+        if r == -1 and n % 2 == 0:
+            return float('inf')
+        else:
+            return float('nan')
+    else:
+        return a * n
+
+# 사용 예시
+a = 1  # 초기 항
+r = 0.5  # 공비
+n = 10  # 항의 개수
+
+sum_value = geometric_series_sum(a, r, n)
+print(sum_value)  # 출력: 1.998046875
