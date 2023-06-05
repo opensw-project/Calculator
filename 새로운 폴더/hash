@@ -1,0 +1,13 @@
+import hashlib
+
+# 文字列のハッシュ値を計算する例
+message = "Hello, World!"
+hash_value = hashlib.sha256(message.encode()).hexdigest()
+print(hash_value)
+
+# ファイルのハッシュ値を計算する例
+filename = "file.txt"
+with open(filename, 'rb') as file:
+    file_contents = file.read()
+    hash_value = hashlib.sha256(file_contents).hexdigest()
+print(hash_value)
