@@ -1,0 +1,11 @@
+def greedy_max(arr):
+    max_val = float('-inf')
+    for num in arr:
+        if num > max_val:
+            max_val = num
+    return max_val
+
+# 使用例
+array = [5, 2, 8, 3, 9, 1]
+result = greedy_max(array)
+print(result)  # 9
