@@ -1,0 +1,20 @@
+import multiprocessing
+
+def worker(name):
+    print(f'Worker {name} started')
+    # ここに並列で実行したい処理を記述する
+    print(f'Worker {name} finished')
+
+if __name__ == '__main__':
+    # プロセス数を指定
+    num_processes = 4
+
+    # プロセスプールの生成
+    pool = multiprocessing.Pool(processes=num_processes)
+
+    # ワーカーの実行
+    pool.map(worker, range(num_processes))
+
+    # プロセスプールの終了
+    pool.close()
+    pool.join()
