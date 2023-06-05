@@ -1,0 +1,18 @@
+# 데코레이터의 기본 구문
+def decorator_function(original_function):
+    def wrapper_function(*args, **kwargs):
+        # 기능 추가 또는 변경 코드 작성
+        # ...
+        result = original_function(*args, **kwargs)
+        # ...
+        return result
+    return wrapper_function
+
+# 데코레이터를 사용하여 함수에 기능 추가하는 예시
+@decorator_function
+def my_function():
+    # 처리
+    pass
+
+# 데코레이터가 적용된 함수 실행
+my_function()
