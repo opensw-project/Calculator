@@ -1,0 +1,10 @@
+  def calculate_inverse(number):
+    if number == 0:
+        return "Undefined"
+    else:
+        return 1 / number
+
+# 사용 예시
+num = 4
+result = calculate_inverse(num)
+print(result)  # 출력: 0.25
