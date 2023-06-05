@@ -1,0 +1,26 @@
+a = 0b1010  # 10 (이진수)
+b = 0b1100  # 12 (이진수)
+
+# 이진수 간 덧셈
+result_add = bin(a + b)
+print(result_add)  # 결과: '0b10110' (22의 이진수)
+
+# 이진수 간 뺄셈
+result_sub = bin(a - b)
+print(result_sub)  # 결과: '-0b110' (-6의 이진수)
+
+# 이진수 간 곱셈
+result_mul = bin(a * b)
+print(result_mul)  # 결과: '0b11110000' (240의 이진수)
+
+# 이진수 간 나눗셈 (정수 나눗셈)
+result_div = bin(a // b)
+print(result_div)  # 결과: '0b0' (0의 이진수)
+
+# 이진수 간 나머지 (나머지 연산)
+result_mod = bin(a % b)
+print(result_mod)  # 결과: '0b1010' (10의 이진수)
+
+# 이진수 간 거듭제곱
+result_pow = bin(a ** b)
+print(result_pow)  # 결과: '0b10000000000' (1024의 이진수)
