@@ -1,0 +1,13 @@
+def event_handler(callback):
+    # 何かイベントが発生したとする
+    data = "Event data"
+
+    # コールバック関数を呼び出す
+    callback(data)
+
+def my_callback(data):
+    # コールバック関数の処理
+    print("Callback function called with data:", data)
+
+# イベントハンドラにコールバック関数を渡す
+event_handler(my_callback)
