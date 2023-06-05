@@ -1,0 +1,13 @@
+# ジェネレーターの定義
+def my_generator():
+    yield 1
+    yield 2
+    yield 3
+
+# ジェネレーターの使用
+gen = my_generator()
+
+# 値の逐次的な取得
+print(next(gen))  # 1
+print(next(gen))  # 2
+print(next(gen))  # 3
