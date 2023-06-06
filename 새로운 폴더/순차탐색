@@ -1,0 +1,5 @@
+def sequential_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i  # 원하는 값이 발견되면 해당 인덱스 반환
+    return -1  # 원하는 값이 발견되지 않을 경우 -1 반환
