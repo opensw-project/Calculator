@@ -1,0 +1,10 @@
+text = "어목조동"
+
+ascii_art = ""
+for char in text:
+    ascii_code = ord(char)  # 문자를 아스키 코드로 변환
+    ascii_art += chr(ascii_code) + " "
+
+print(ascii_code)
+
+print(ascii_art)
