@@ -1,0 +1,8 @@
+import time
+
+frames = ["(・ω・)", "(｡♥‿♥｡)", "(^◡^ )", "(^◕‿◕^)", "(✿◠‿◠)"]
+
+while True:
+    for frame in frames:
+        print(frame, end="\r")
+        time.sleep(0.5)
