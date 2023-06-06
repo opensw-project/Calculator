@@ -1,0 +1,5 @@
+import numpy as np
+
+# 3x3 크기의 배열 형태의 난수 생성
+random_array = np.random.random((3, 3))
+print(random_array)
