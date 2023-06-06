@@ -1,0 +1,8 @@
+while True:
+    message = input("話しかけてください（終了するには「さようなら」と入力）: ")
+
+    if message == "さようなら":
+        print("さようなら！")
+        break
+    else:
+        print("「{}」と言いましたね。面白いですね！".format(message))
