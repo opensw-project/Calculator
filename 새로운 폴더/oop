@@ -1,0 +1,33 @@
+class Car:
+    def __init__(self, brand, model, color):
+        self.brand = brand
+        self.model = model
+        self.color = color
+        self.speed = 0
+
+    def accelerate(self, increment):
+        self.speed += increment
+
+    def brake(self, decrement):
+        if self.speed >= decrement:
+            self.speed -= decrement
+        else:
+            self.speed = 0
+
+    def display_info(self):
+        print("Brand:", self.brand)
+        print("Model:", self.model)
+        print("Color:", self.color)
+        print("Speed:", self.speed)
+
+
+# Carクラスのインスタンス化
+car1 = Car("Toyota", "Camry", "Red")
+car2 = Car("Honda", "Accord", "Blue")
+
+# メソッドの呼び出し
+car1.accelerate(30)
+car2.accelerate(20)
+
+car1.display_info()
+car2.display_info()
