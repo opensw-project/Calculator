@@ -1,0 +1,14 @@
+import random
+
+target_number = random.randint(1, 100)
+
+while True:
+    guess = int(input("1から100までの数を当ててください: "))
+
+    if guess < target_number:
+        print("もっと大きい数です！")
+    elif guess > target_number:
+        print("もっと小さい数です！")
+    else:
+        print("正解です！")
+        break
