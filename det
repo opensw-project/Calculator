@@ -1,0 +1,16 @@
+import numpy as np
+
+def calculate_determinant(matrix):
+    det = np.linalg.det(matrix)
+    return det
+
+# 사용 예시
+n = int(input("행렬의 크기를 입력하세요: "))
+
+matrix = []
+for i in range(n):
+    row = list(map(float, input(f"{i+1}번째 행을 입력하세요 (공백으로 구분): ").split()))
+    matrix.append(row)
+
+det = calculate_determinant(matrix)
+print("행렬식 (det):", det)
