@@ -1,0 +1,45 @@
+import tkinter as tk
+
+def button_click(number):
+    current = entry.get()
+    entry.delete(0, tk.END)
+    entry.insert(tk.END, current + str(number))
+
+def button_clear():
+    entry.delete(0, tk.END)
+
+def button_equal():
+    expression = entry.get()
+    result = eval(expression)
+    entry.delete(0, tk.END)
+    entry.insert(tk.END, result)
+
+# ウィンドウの作成
+window = tk.Tk()
+window.title("電卓")
+
+# テキストボックスの作成
+entry = tk.Entry(window, width=30, justify="right")
+entry.grid(row=0, column=0, columnspan=4)
+
+# ボタンの作成
+buttons = [
+    "7", "8", "9", "/",
+    "4", "5", "6", "*",
+    "1", "2", "3", "-",
+    "0", ".", "=", "+"
+]
+row = 1
+col = 0
+for button in buttons:
+    tk.Button(window, text=button, padx=10, pady=10, command=lambda num=button: button_click(num)).grid(row=row, column=col)
+    col += 1
+    if col > 3:
+        col = 0
+        row += 1
+
+# クリアボタンの作成
+tk.Button(window, text="C", padx=10, pady=10, command=button_clear).grid(row=row, column=col)
+
+# ウィンドウのループ処理
+window.mainloop()
