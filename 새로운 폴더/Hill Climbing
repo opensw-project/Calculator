@@ -1,0 +1,13 @@
+import random
+
+def hill_climbing(problem):
+    current_state = problem.get_initial_state()
+
+    while True:
+        neighbors = problem.get_neighbors(current_state)
+        best_neighbor = max(neighbors, key=lambda neighbor: problem.calculate_fitness(neighbor))
+
+        if problem.calculate_fitness(best_neighbor) <= problem.calculate_fitness(current_state):
+            return current_state
+
+        current_state = best_neighbor

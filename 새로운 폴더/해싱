@@ -1,0 +1,14 @@
+# 딕셔너리 생성
+hash_table = {}
+
+# 데이터 추가
+hash_table["apple"] = 1500
+hash_table["banana"] = 2000
+hash_table["orange"] = 1000
+
+# 데이터 검색
+price = hash_table.get("apple")
+if price:
+    print("Apple price:", price)
+else:
+    print("Apple not found in hash table")

@@ -1,0 +1,24 @@
+def interpolate(x, x_points, y_points):
+    """
+    내분점을 계산하는 함수
+
+    인자:
+    x: 내분점을 구할 x 값
+    x_points: 주어진 데이터의 x 좌표 리스트
+    y_points: 주어진 데이터의 y 좌표 리스트
+
+    반환값:
+    내분점에 대한 y 값
+    """
+
+    n = len(x_points)
+    result = 0.0
+
+    for i in range(n):
+        term = y_points[i]
+        for j in range(n):
+            if i != j:
+                term *= (x - x_points[j]) / (x_points[i] - x_points[j])
+        result += term
+
+    return result

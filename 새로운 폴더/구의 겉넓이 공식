@@ -1,0 +1,15 @@
+import math
+
+def calculate_surface_area(radius):
+    """
+    구의 겉넓이를 계산하는 함수
+
+    인자:
+    radius: 구의 반지름
+
+    반환값:
+    구의 겉넓이
+    """
+
+    surface_area = 4 * math.pi * radius**2
+    return surface_area

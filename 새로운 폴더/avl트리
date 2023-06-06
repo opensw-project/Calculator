@@ -1,0 +1,20 @@
+from avl import AVLTree
+
+# AVL 트리 생성
+avl_tree = AVLTree()
+
+# 데이터 삽입
+avl_tree.insert(5)
+avl_tree.insert(3)
+avl_tree.insert(7)
+avl_tree.insert(2)
+avl_tree.insert(4)
+
+# 데이터 탐색
+print("Is 4 in the AVL tree?", avl_tree.search(4))  # 출력: True
+
+# 데이터 삭제
+avl_tree.delete(3)
+
+# 전체 트리 출력
+avl_tree.print_tree()
