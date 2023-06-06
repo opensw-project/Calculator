@@ -1,0 +1,16 @@
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+def preorderTraversal(root):
+    if root is None:
+        return []
+
+    result = []
+    result.append(root.val)
+    result += preorderTraversal(root.left)
+    result += preorderTraversal(root.right)
+
+    return result
