@@ -1,0 +1,10 @@
+while True:
+    n = int(input())
+    if n==0:
+        break
+    li = list(map(int,input().split()))
+    ave = sum(li) / len(li)
+    sm = 0
+    for i in range(n):
+        sm += (li[i]-ave)**2
+    print((sm/len(li))**0.5)      
