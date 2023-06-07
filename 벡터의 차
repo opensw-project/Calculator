@@ -1,0 +1,30 @@
+def calculate_vector_difference(vector1, vector2):
+    """
+    주어진 두 벡터의 차를 계산합니다.
+
+    Args:
+        vector1 (list): 첫 번째 벡터의 좌표.
+        vector2 (list): 두 번째 벡터의 좌표.
+
+    Returns:
+        list: 계산된 벡터의 차.
+    """
+    vector_diff = [0, 0]  # 벡터의 차 초기화
+    vector_diff[0] = vector1[0] - vector2[0]  # x 좌표 뺄셈
+    vector_diff[1] = vector1[1] - vector2[1]  # y 좌표 뺄셈
+    return vector_diff
+
+# 사용자로부터 두 벡터의 좌표를 입력받습니다.
+vector1 = []
+vector1.append(float(input("첫 번째 벡터의 x 좌표를 입력하세요: ")))
+vector1.append(float(input("첫 번째 벡터의 y 좌표를 입력하세요: ")))
+
+vector2 = []
+vector2.append(float(input("두 번째 벡터의 x 좌표를 입력하세요: ")))
+vector2.append(float(input("두 번째 벡터의 y 좌표를 입력하세요: ")))
+
+# 벡터의 차를 계산합니다.
+result = calculate_vector_difference(vector1, vector2)
+
+# 결과를 출력합니다.
+print("벡터의 차:", result)
