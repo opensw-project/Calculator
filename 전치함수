@@ -1,0 +1,17 @@
+from sympy import symbols, sympify
+
+def calculate_inverse_function(expression, variable):
+    x = symbols(variable)
+    f = sympify(expression)
+    
+    # 전치함수 계산
+    f_inverse = f.subs(x, symbols('y'))
+    
+    return f_inverse
+
+# 사용 예시
+expression = input("함수를 입력하세요: ")
+variable = input("전치함수를 계산할 변수를 입력하세요: ")
+
+inverse_function = calculate_inverse_function(expression, variable)
+print("전치함수:", inverse_function)
