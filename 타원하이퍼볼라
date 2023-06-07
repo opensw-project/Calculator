@@ -1,0 +1,22 @@
+import math
+
+def calculate_elliptic_hyperbola_tangent_length(a, b, x):
+    y = math.sqrt((x**2 * b**2) / a**2 - b**2)
+    tangent_length = math.sqrt(1 + ((a**2 * y**2) / b**2))
+    return tangent_length
+
+def calculate_elliptic_hyperbola_radius_of_curvature(a, b, x):
+    y = math.sqrt((x**2 * b**2) / a**2 - b**2)
+    radius_of_curvature = (a * b) / math.sqrt(a**2 * y**2 + b**4)
+    return radius_of_curvature
+
+# 사용 예시
+a = float(input("타원하이퍼볼라의 a 값을 입력하세요: "))
+b = float(input("타원하이퍼볼라의 b 값을 입력하세요: "))
+x = float(input("접선을 계산할 x 좌표를 입력하세요: "))
+
+tangent_length = calculate_elliptic_hyperbola_tangent_length(a, b, x)
+radius_of_curvature = calculate_elliptic_hyperbola_radius_of_curvature(a, b, x)
+
+print("접선의 길이:", tangent_length)
+print("곡률 반경:", radius_of_curvature)
