@@ -1,0 +1,24 @@
+import math
+
+def calculate_square_area(side):
+    area = side**2
+    return area
+
+def calculate_square_perimeter(side):
+    perimeter = 4 * side
+    return perimeter
+
+def calculate_square_diagonal(side):
+    diagonal = side * math.sqrt(2)
+    return diagonal
+
+# 사용 예시
+side = float(input("정사각형의 한 변의 길이를 입력하세요: "))
+
+area = calculate_square_area(side)
+perimeter = calculate_square_perimeter(side)
+diagonal = calculate_square_diagonal(side)
+
+print("정사각형의 면적:", area)
+print("정사각형의 둘레:", perimeter)
+print("정사각형의 대각선 길이:", diagonal)
