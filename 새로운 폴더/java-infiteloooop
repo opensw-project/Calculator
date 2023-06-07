@@ -1,0 +1,9 @@
+public class InfiniteLoopExample {
+
+    public static void main(String[] args) {
+        while (true) {
+            // 無限ループ内で実行する処理
+            System.out.println("This is an infinite loop!");
+        }
+    }
+}
