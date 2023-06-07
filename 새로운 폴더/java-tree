@@ -1,0 +1,13 @@
+public class CactusOutputExample {
+
+    public static void main(String[] args) {
+        String cactus = 
+            "   ^   \n" +
+            "  ^^^  \n" +
+            " ^^^^^ \n" +
+            "  ^^^  \n" +
+            "   |   ";
+
+        System.out.println(cactus);
+    }
+}
