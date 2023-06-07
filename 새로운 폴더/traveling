@@ -1,0 +1,14 @@
+n = int(input())
+
+plans = []
+for _ in range(n):
+    plans.append(map(int, input().split()))
+
+st = sx = sy = 0
+for t, x, y in plans:
+    dt, dx, dy = t - st, abs(x - sx), abs(y - sy)
+    if t % 2 != (x + y) % 2 or dx + dy > dt:
+        print('No')
+        exit()
+    st, sx, sy = t, x, y
+print('Yes')
