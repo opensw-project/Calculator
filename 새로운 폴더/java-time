@@ -1,0 +1,20 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class ClockOutputExample {
+
+    public static void main(String[] args) {
+        while (true) {
+            Date now = new Date();
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+            String time = sdf.format(now);
+            System.out.print("\r" + time);
+
+            try {
+                Thread.sleep(1000); // 1秒待機
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
