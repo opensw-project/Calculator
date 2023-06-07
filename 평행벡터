@@ -1,0 +1,68 @@
+def vector_sum(v1, v2):
+    """
+    두 벡터의 합을 계산합니다.
+
+    Args:
+        v1 (list): 첫 번째 벡터.
+        v2 (list): 두 번째 벡터.
+
+    Returns:
+        list: 벡터의 합.
+    """
+    return [v1[0] + v2[0], v1[1] + v2[1], v1[2] + v2[2]]
+
+def vector_difference(v1, v2):
+    """
+    두 벡터의 차를 계산합니다.
+
+    Args:
+        v1 (list): 첫 번째 벡터.
+        v2 (list): 두 번째 벡터.
+
+    Returns:
+        list: 벡터의 차.
+    """
+    return [v1[0] - v2[0], v1[1] - v2[1], v1[2] - v2[2]]
+
+def dot_product(v1, v2):
+    """
+    두 벡터의 내적을 계산합니다.
+
+    Args:
+        v1 (list): 첫 번째 벡터.
+        v2 (list): 두 번째 벡터.
+
+    Returns:
+        float: 내적 값.
+    """
+    return v1[0] * v2[0] + v1[1] * v2[1] + v1[2] * v2[2]
+
+def cross_product(v1, v2):
+    """
+    두 벡터의 외적을 계산합니다.
+
+    Args:
+        v1 (list): 첫 번째 벡터.
+        v2 (list): 두 번째 벡터.
+
+    Returns:
+        list: 외적 벡터.
+    """
+    x = v1[1] * v2[2] - v1[2] * v2[1]
+    y = v1[2] * v2[0] - v1[0] * v2[2]
+    z = v1[0] * v2[1] - v1[1] * v2[0]
+    return [x, y, z]
+
+# 사용자로부터 벡터의 값을 입력받습니다.
+v1 = [float(input("첫 번째 벡터의 x 성분을 입력하세요: ")),
+      float(input("첫 번째 벡터의 y 성분을 입력하세요: ")),
+      float(input("첫 번째 벡터의 z 성분을 입력하세요: "))]
+
+v2 = [float(input("두 번째 벡터의 x 성분을 입력하세요: ")),
+      float(input("두 번째 벡터의 y 성분을 입력하세요: ")),
+      float(input("두 번째 벡터의 z 성분을 입력하세요: "))]
+
+# 평행한 벡터의 합, 차, 내적, 외적을 계산합니다.
+sum_result = vector_sum(v1, v2)
+difference_result = vector_difference(v1, v2)
+dot_product_result = dot_product(v1, v2)
