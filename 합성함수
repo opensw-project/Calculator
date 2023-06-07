@@ -1,0 +1,30 @@
+def calculate_composite_function(f, g, x):
+    """
+    주어진 두 함수의 합성함수를 계산합니다.
+
+    Args:
+        f (function): 첫 번째 함수.
+        g (function): 두 번째 함수.
+        x (float): 입력 값.
+
+    Returns:
+        float: 합성함수의 결과.
+    """
+    return f(g(x))
+
+# 사용자로부터 첫 번째 함수와 두 번째 함수를 입력받습니다.
+f_expression = input("첫 번째 함수의 수식을 입력하세요: ")
+g_expression = input("두 번째 함수의 수식을 입력하세요: ")
+
+# eval() 함수를 사용하여 입력된 함수를 평가합니다.
+f = eval("lambda x: " + f_expression)
+g = eval("lambda x: " + g_expression)
+
+# 합성함수의 입력 값을 입력받습니다.
+x = float(input("합성함수의 입력 값을 입력하세요: "))
+
+# 합성함수를 계산합니다.
+result = calculate_composite_function(f, g, x)
+
+# 결과를 출력합니다.
+print("합성함수의 결과:", result)
