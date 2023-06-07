@@ -1,0 +1,17 @@
+import numpy as np
+
+def calculate_inverse(matrix):
+    inv_matrix = np.linalg.inv(matrix)
+    return inv_matrix
+
+# 사용 예시
+n = int(input("행렬의 크기를 입력하세요: "))
+
+matrix = []
+for i in range(n):
+    row = list(map(float, input(f"{i+1}번째 행을 입력하세요 (공백으로 구분): ").split()))
+    matrix.append(row)
+
+inverse_matrix = calculate_inverse(matrix)
+print("역행렬:")
+print(inverse_matrix)
