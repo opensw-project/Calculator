@@ -1,0 +1,24 @@
+import math
+
+def calculate_cube_volume(side):
+    volume = side**3
+    return volume
+
+def calculate_cube_surface_area(side):
+    surface_area = 6 * side**2
+    return surface_area
+
+def calculate_cube_diagonal(side):
+    diagonal = math.sqrt(3) * side
+    return diagonal
+
+# 사용 예시
+side = float(input("정팔면체의 한 변의 길이를 입력하세요: "))
+
+volume = calculate_cube_volume(side)
+surface_area = calculate_cube_surface_area(side)
+diagonal = calculate_cube_diagonal(side)
+
+print("정팔면체의 부피:", volume)
+print("정팔면체의 표면적:", surface_area)
+print("정팔면체의 대각선 길이:", diagonal)
