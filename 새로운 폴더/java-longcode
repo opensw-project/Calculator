@@ -1,0 +1,66 @@
+public class LongCodeExample {
+
+    public static void main(String[] args) {
+        // ここから長いコードが始まります
+        
+        int sum = 0;
+        
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                sum += i;
+            } else if (i % 3 == 0) {
+                sum -= i;
+            } else if (i % 5 == 0) {
+                sum *= i;
+            } else {
+                sum /= i;
+            }
+        }
+        
+        System.out.println("Sum: " + sum);
+        
+        // 長いコードはまだ続きます...
+        
+        String message = "This is a long code example";
+        
+        for (int i = 0; i < message.length(); i++) {
+            char c = message.charAt(i);
+            
+            if (Character.isUpperCase(c)) {
+                System.out.print(Character.toLowerCase(c));
+            } else if (Character.isLowerCase(c)) {
+                System.out.print(Character.toUpperCase(c));
+            } else {
+                System.out.print(c);
+            }
+        }
+        
+        System.out.println();
+        
+        // ...続く...
+        
+        int[][] matrix = new int[5][5];
+        
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = i * j;
+            }
+        }
+        
+        for (int[] row : matrix) {
+            for (int num : row) {
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
+        
+        // ...まだまだ続きます...
+        
+        System.out.println("This is a long code example.");
+        System.out.println("It keeps going and going...");
+        System.out.println("And going...");
+        
+        // 最後の行です
+        
+    }
+}
