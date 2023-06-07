@@ -1,0 +1,29 @@
+def calculate_vector_sum(vectors):
+    """
+    주어진 벡터들의 합을 계산합니다.
+
+    Args:
+        vectors (list): 벡터들의 리스트.
+
+    Returns:
+        list: 합산된 벡터의 좌표.
+    """
+    vector_sum = [0, 0]  # 합산된 벡터의 초기 좌표
+    for vector in vectors:
+        vector_sum[0] += vector[0]  # x 좌표 덧셈
+        vector_sum[1] += vector[1]  # y 좌표 덧셈
+    return vector_sum
+
+# 사용자로부터 벡터들의 좌표를 입력받습니다.
+vectors = []
+num_vectors = int(input("벡터의 개수를 입력하세요: "))
+for i in range(num_vectors):
+    x = float(input(f"벡터 {i+1}의 x 좌표를 입력하세요: "))
+    y = float(input(f"벡터 {i+1}의 y 좌표를 입력하세요: "))
+    vectors.append([x, y])
+
+# 벡터의 합을 계산합니다.
+result = calculate_vector_sum(vectors)
+
+# 결과를 출력합니다.
+print("벡터의 합:", result)
