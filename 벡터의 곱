@@ -1,0 +1,49 @@
+def calculate_scalar_product(vector, scalar):
+    """
+    주어진 벡터와 스칼라의 스칼라곱을 계산합니다.
+
+    Args:
+        vector (list): 벡터의 좌표.
+        scalar (float): 스칼라 값.
+
+    Returns:
+        list: 계산된 벡터의 스칼라곱.
+    """
+    scalar_product = [scalar * coord for coord in vector]
+    return scalar_product
+
+def calculate_dot_product(vector1, vector2):
+    """
+    주어진 두 벡터의 내적을 계산합니다.
+
+    Args:
+        vector1 (list): 첫 번째 벡터의 좌표.
+        vector2 (list): 두 번째 벡터의 좌표.
+
+    Returns:
+        float: 계산된 벡터의 내적.
+    """
+    dot_product = sum(coord1 * coord2 for coord1, coord2 in zip(vector1, vector2))
+    return dot_product
+
+# 사용자로부터 벡터의 좌표를 입력받습니다.
+vector1 = []
+vector1.append(float(input("첫 번째 벡터의 x 좌표를 입력하세요: ")))
+vector1.append(float(input("첫 번째 벡터의 y 좌표를 입력하세요: ")))
+
+vector2 = []
+vector2.append(float(input("두 번째 벡터의 x 좌표를 입력하세요: ")))
+vector2.append(float(input("두 번째 벡터의 y 좌표를 입력하세요: ")))
+
+# 사용자로부터 스칼라 값을 입력받습니다.
+scalar = float(input("스칼라 값을 입력하세요: "))
+
+# 스칼라곱을 계산합니다.
+scalar_product = calculate_scalar_product(vector1, scalar)
+
+# 내적을 계산합니다.
+dot_product = calculate_dot_product(vector1, vector2)
+
+# 결과를 출력합니다.
+print("벡터의 스칼라곱:", scalar_product)
+print("벡터의 내적:", dot_product)
