@@ -1,0 +1,27 @@
+from sympy import symbols, diff
+
+def calculate_derivative(expression, variable):
+    """
+    주어진 함수의 도함수를 계산합니다.
+
+    Args:
+        expression (str): 함수의 수식.
+        variable (str): 독립 변수.
+
+    Returns:
+        str: 도함수의 수식.
+    """
+    x = symbols(variable)
+    f = eval(expression)
+    derivative = diff(f, x)
+    return str(derivative)
+
+# 사용자로부터 함수의 수식과 독립 변수를 입력받습니다.
+expression = input("함수의 수식을 입력하세요: ")
+variable = input("독립 변수를 입력하세요: ")
+
+# 도함수를 계산합니다.
+derivative = calculate_derivative(expression, variable)
+
+# 결과를 출력합니다.
+print("도함수:", derivative)
