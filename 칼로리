@@ -1,0 +1,32 @@
+food_database = {
+    "사과": 52,
+    "바나나": 96,
+    "딸기": 32,
+    "오렌지": 43,
+    "포도": 69
+}  # 음식에 따라 코드 변경 가능
+
+def calculate_calories(food_items):
+    """
+    주어진 음식 목록의 총 칼로리를 계산합니다.
+
+    Args:
+        food_items (list): 음식 목록.
+
+    Returns:
+        int: 총 칼로리.
+    """
+    total_calories = 0
+    for food in food_items:
+        if food in food_database:
+            total_calories += food_database[food]
+    return total_calories
+
+# 사용자로부터 음식 목록을 입력받습니다.
+food_list = input("음식 목록을 입력하세요 (쉼표로 구분): ").split(",")
+
+# 칼로리를 계산합니다.
+calories = calculate_calories(food_list)
+
+# 결과를 출력합니다.
+print("총 칼로리:", calories, "kcal")
