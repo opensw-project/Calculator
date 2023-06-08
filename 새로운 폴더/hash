@@ -11,3 +11,4 @@ with open(filename, 'rb') as file:
     file_contents = file.read()
     hash_value = hashlib.sha256(file_contents).hexdigest()
 print(hash_value)
+ 
