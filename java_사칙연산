@@ -5,7 +5,7 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("演算子を選んでください（+、-、*、/）：");
-        String operator = scanner.nextLine();
+        String operator = scanner.nextLine();  
 
         System.out.println("最初の数値を入力してください：");
         double operand1 = scanner.nextDouble();
