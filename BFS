@@ -4,7 +4,6 @@ def maze_solver(maze, start_row, start_col, goal_row, goal_col):
     rows = len(maze)
     cols = len(maze[0])
 
-    directions = [(-1, 0), (0, 1), (1, 0), (0, -1)]  
 
     queue = deque([(start_row, start_col, [])])
 
