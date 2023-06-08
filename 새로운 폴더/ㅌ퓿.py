@@ -5,3 +5,4 @@ def decimal_to_octal(decimal):
         octal = str(remainder) + octal
         decimal //= 8
     return octal
+ 
