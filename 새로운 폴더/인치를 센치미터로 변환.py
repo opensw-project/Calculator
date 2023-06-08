@@ -3,5 +3,5 @@ def convert_inch_to_cm(inch):
     return cm
     
    num = float(input('인치를 입력 :')
-
+ 
 print(convert_inch_to_cm(num))
