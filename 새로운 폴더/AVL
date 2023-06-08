@@ -35,7 +35,7 @@ class AVLTree:
                 return self._rotate_left(node)
             else:
                 node.right = self._rotate_right(node.right)
-                return self._rotate_left(node)
+                return self._rotate_left(node)  
 
         return node
 
@@ -81,3 +81,5 @@ class AVLTree:
             self._in_order_traversal(node.left)
             print(node.value)
             self._in_order_traversal(node.right)
+
+ 

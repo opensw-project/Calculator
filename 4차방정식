@@ -11,6 +11,6 @@ x = float(input("x 값을 입력하세요: "))
 
 coefficients = [a, b, c, d, e]
 
-result = np.polyval(coefficients, x)
+result = np.polyval(coefficients, x)  
 
 print("방정식 값은:", result)

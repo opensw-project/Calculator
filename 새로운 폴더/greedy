@@ -5,6 +5,7 @@ def greedy_max(arr):
             max_val = num
     return max_val
 
+
 # 使用例
 array = [5, 2, 8, 3, 9, 1]
 result = greedy_max(array)

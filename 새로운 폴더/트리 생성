@@ -35,3 +35,5 @@ values = [6, 4, 8, 2, 5, 7, 9, 1, 3]
 
 for value in values:
     root = insert(root, value)
+    
+     

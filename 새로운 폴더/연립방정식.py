@@ -6,3 +6,4 @@ B = np.array([4, 5])
 C = np.linalg.solve(A, B)
 
 print(C)
+ 

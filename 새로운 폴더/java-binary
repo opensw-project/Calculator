@@ -1,0 +1,33 @@
+public class BinarySearch {
+    public static int binarySearch(int[] arr, int target) {
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (arr[mid] == target) {
+                return mid; // 目標値が見つかった場合、インデックスを返す
+            } else if (arr[mid] < target) {
+                left = mid + 1; // 中央値よりも大きい場合、探索範囲を右側に狭める
+            } else {
+                right = mid - 1; // 中央値よりも小さい場合、探索範囲を左側に狭める
+            }
+        }
+
+        return -1; // 目標値が見つからなかった場合、-1を返す
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 2, 5, 8, 12, 16, 23, 38, 56, 72, 91 };
+        int target = 23;
+
+        int result = binarySearch(arr, target);
+
+        if (result != -1) {
+            System.out.println("目標値 " + target + " はインデックス " + result + " に存在します。");
+        } else {
+            System.out.println("目標値 " + target + " は見つかりませんでした。");
+        }
+    }
+}

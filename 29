@@ -1,0 +1,14 @@
+import itertools
+
+def permutations(elements, r=None):
+    # 주어진 요소들의 순열을 계산하는 함수
+    result = list(itertools.permutations(elements, r))
+    return result
+
+# 예시: 주어진 요소들의 모든 순열 계산
+elements = [1, 2, 3]
+permutations_list = permutations(elements)
+print(f"요소들: {elements}")
+print(f"순열들:")
+for permutation in permutations_list:
+    print(permutation)

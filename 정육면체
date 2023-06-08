@@ -1,6 +1,6 @@
 import math
 
-def calculate_cube_volume(side):
+def calculate_cube_volume(side):  
     volume = side**3
     return volume
 
