@@ -1,0 +1,12 @@
+def hanoi_tower(n, source, destination, auxiliary):
+    if n == 1:
+        print(f"Move disk 1 from {source} to {destination}")
+        return
+
+    hanoi_tower(n-1, source, auxiliary, destination)
+    print(f"Move disk {n} from {source} to {destination}")
+    hanoi_tower(n-1, auxiliary, destination, source)
+
+# 예시 실행
+n = 3  # 원반의 개수를 적절히 수정해주세요.
+hanoi_tower(n, 'A', 'C', 'B')
