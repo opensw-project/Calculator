@@ -6,7 +6,7 @@ def calculate_geometric_series(first_term, common_ratio, n):
         current_term *= common_ratio
     return series
 
-# 사용 예시
+# 사용 예시  
 first_term = 2
 common_ratio = 3
 n = 5

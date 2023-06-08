@@ -11,3 +11,4 @@ def my_callback(data):
 
 # イベントハンドラにコールバック関数を渡す
 event_handler(my_callback)
+ 

@@ -8,4 +8,4 @@ def f(x):
 result = minimize_scalar(f)
 min_value = result.fun
 
-print(min_value)  # 출력: -1.0
+print(min_value)  # 출력: -1.0  

@@ -1,0 +1,21 @@
+import math
+
+def calculate_function():
+    function = input("함수를 입력하세요 (예: sin(x) + cos(x)): ")
+    variable = input("변수의 값을 입력하세요 (예: x=2): ")
+
+    # 입력받은 변수의 값을 파싱하여 변수 딕셔너리에 저장
+    variable_dict = {}
+    variable_list = variable.split(',')
+    for var in variable_list:
+        var_name, var_value = var.split('=')
+        variable_dict[var_name.strip()] = float(var_value)
+
+    # 함수 계산
+    try:
+        result = eval(function, {'__builtins__': None}, variable_dict)
+        print("계산 결과:", result)
+    except (NameError, SyntaxError):
+        print("유효하지 않은 함수 또는 변수입니다.")
+
+calculate_function()

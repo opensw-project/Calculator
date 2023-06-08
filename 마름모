@@ -1,0 +1,26 @@
+import math
+
+def calculate_rhombus_area(diagonal1, diagonal2):
+    area = (diagonal1 * diagonal2) / 2
+    return area
+
+def calculate_rhombus_perimeter(side):
+    perimeter = 4 * side
+    return perimeter
+
+def calculate_rhombus_diagonal(diagonal1, diagonal2):
+    diagonal = math.sqrt(diagonal1**2 + diagonal2**2)
+    return diagonal
+
+# 사용 예시
+diagonal1 = float(input("마름모의 첫 번째 대각선의 길이를 입력하세요: "))
+diagonal2 = float(input("마름모의 두 번째 대각선의 길이를 입력하세요: "))
+side = float(input("마름모의 한 변의 길이를 입력하세요: "))
+
+area = calculate_rhombus_area(diagonal1, diagonal2)
+perimeter = calculate_rhombus_perimeter(side)
+diagonal = calculate_rhombus_diagonal(diagonal1, diagonal2)
+
+print("마름모의 넓이:", area)
+print("마름모의 둘레:", perimeter)
+print("마름모의 대각선 길이:", diagonal) 

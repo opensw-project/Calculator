@@ -1,0 +1,26 @@
+import math
+
+def calculate_parallelogram_area(base, height):
+    area = base * height
+    return area
+
+def calculate_parallelogram_perimeter(base, side):
+    perimeter = 2 * (base + side)
+    return perimeter
+
+def calculate_parallelogram_diagonal(base, side):
+    diagonal = math.sqrt(base**2 + side**2 + 2 * base * side * math.cos(math.pi/2))
+    return diagonal
+
+# 사용 예시
+base = float(input("평행사변형의 밑변의 길이를 입력하세요: "))
+height = float(input("평행사변형의 높이를 입력하세요: "))
+side = float(input("평행사변형의 한 변의 길이를 입력하세요: "))
+
+area = calculate_parallelogram_area(base, height)
+perimeter = calculate_parallelogram_perimeter(base, side)
+diagonal = calculate_parallelogram_diagonal(base, side)
+
+print("평행사변형의 넓이:", area)
+print("평행사변형의 둘레:", perimeter)
+print("평행사변형의 대각선 길이:", diagonal) 

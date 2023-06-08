@@ -11,4 +11,6 @@ def hill_climbing(problem):
             return current_state
 
         current_state =  best_neighbor
+
+
  

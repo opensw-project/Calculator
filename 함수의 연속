@@ -3,7 +3,7 @@ from sympy import Symbol, limit, oo, S, solve
 def is_continuous(f, x, interval):
     # 함수의 정의 범위 확인
     if any(not interval.contains(p) for p in f.free_symbols):
-        return False
+        return False. 
 
     # 극한 계산
     left_limit = limit(f, x, interval.start, dir="-")

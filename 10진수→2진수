@@ -1,4 +1,4 @@
-decimal_number = 10
+decimal_number = 10. 
 binary_number = bin(decimal_number)
 
-print(binary_number)  # '0b1010'
+print(binary_number)  # '0b1010'  
