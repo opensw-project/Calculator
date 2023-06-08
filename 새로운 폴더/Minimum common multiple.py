@@ -12,3 +12,4 @@ def lcm(a, b):
 
     return lcm
  
+ 
