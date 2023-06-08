@@ -1,3 +1,4 @@
 numbers = [1, 2, 3, 4, 5]
 numbers.reverse()  # リストを逆順にする
 print(numbers)  # 逆順になったリストを出力
+  
