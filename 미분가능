@@ -11,7 +11,7 @@ def calculate_derivative(expression, variable):
     Returns:
         str: 도함수의 수식.
     """
-    x = symbols(variable)
+    x = symbols(variable)  
     f = eval(expression)
     derivative = diff(f, x)
     return str(derivative)

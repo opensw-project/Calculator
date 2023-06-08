@@ -5,7 +5,7 @@ def draw_star():
     turtle.speed(2)
     turtle.color("blue")
 
-    # 星を描く
+    # 星を描く  
     for _ in range(5):
         turtle.forward(100)
         turtle.right(144)
