@@ -1,0 +1,27 @@
+public class InsertionSort {
+    public static void insertionSort(int[] array) {
+        int n = array.length;
+
+        for (int i = 1; i < n; i++) {
+            int key = array[i];
+            int j = i - 1;
+
+            // ソート済み部分の右端から、挿入位置を探す
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j--;
+            }
+
+            array[j + 1] = key;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] array = {5, 2, 8, 1, 4};
+        System.out.println("Before sorting: " + Arrays.toString(array));
+
+        insertionSort(array);
+
+        System.out.println("After sorting: " + Arrays.toString(array));
+    }
+}

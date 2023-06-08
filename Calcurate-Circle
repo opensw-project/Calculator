@@ -5,7 +5,7 @@ def calculate_circle(radius):
     area = math.pi * radius**2
 
     # 원의 둘레 계산
-    circumference = 2 * math.pi * radius
+    circumference = 2 * math.pi * radius  
 
     return area, circumference
 

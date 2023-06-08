@@ -1,7 +1,7 @@
 import hashlib
 
 # 文字列のハッシュ値を計算する例
-message = "Hello, World!"
+message = "Hello, World!" 
 hash_value = hashlib.sha256(message.encode()).hexdigest()
 print(hash_value)
 

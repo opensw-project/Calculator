@@ -1,0 +1,15 @@
+public class BruteForce {
+    public static void main(String[] args) {
+        int n = 10; // 数字の範囲
+
+        // 3桁の数の全探索
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int k = 0; k < n; k++) {
+                    int number = i * 100 + j * 10 + k;
+                    System.out.println(number);
+                }
+            }
+        }
+    }
+}

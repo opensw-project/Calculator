@@ -4,7 +4,7 @@ def complement_set(A, universe):
     """
     complement = []
     for element in universe:
-        if element not in A:
+        if element not in A:  
             complement.append(element)
     return complement
 

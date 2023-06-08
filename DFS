@@ -9,6 +9,7 @@ def maze_solver(maze, start_row, start_col, goal_row, goal_col):
     # 経路を保存するスタック
     stack = [(start_row, start_col, [])]
 
+
     while stack:
         row, col, path = stack.pop()
 

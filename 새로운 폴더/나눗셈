@@ -3,3 +3,4 @@ num2 = 2
 result = num1 / num2
 
 print("나눗셈 결과:", result)
+ 
