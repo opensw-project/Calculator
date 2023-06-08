@@ -5,7 +5,7 @@ def f(x):
     return -x**2 + 4*x - 3
 
 # minimize_scalar 함수를 사용하여 최댓값 계산
-result = minimize_scalar(lambda x: -f(x))
+result = minimize_scalar(lambda x: -f(x)) 
 max_value = -result.fun
 
 print(max_value)  # 출력: 2.0
