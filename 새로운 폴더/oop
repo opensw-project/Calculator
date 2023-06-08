@@ -19,7 +19,7 @@ class Car:
         print("Model:", self.model)
         print("Color:", self.color)
         print("Speed:", self.speed)
-
+ 
 
 # Carクラスのインスタンス化
 car1 = Car("Toyota", "Camry", "Red")
