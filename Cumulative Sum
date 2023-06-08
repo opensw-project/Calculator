@@ -15,4 +15,4 @@ arr = [1, 2, 3, 4, 5]
 result = cumulative_sum(arr)
 
 # 結果の出力
-print("累積和:", result)
+print("累積和:", result)  
