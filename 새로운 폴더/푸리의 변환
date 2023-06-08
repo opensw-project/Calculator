@@ -1,0 +1,33 @@
+import numpy as np
+from scipy.fft import fft, fftshift
+import matplotlib.pyplot as plt
+
+def apply_fourier_transform(signal):
+    # 시간 영역에서 푸리에 변환 수행
+    signal_fft = fft(signal)
+
+    # 주파수 영역으로 변환된 신호를 이동
+    signal_fft_shifted = fftshift(signal_fft)
+
+    # 주파수 영역에서의 파워 스펙트럼 계산
+    power_spectrum = np.abs(signal_fft_shifted) ** 2
+
+    # 결과 그래프 출력
+    plt.figure(figsize=(10, 4))
+
+    # 원본 신호
+    plt.subplot(1, 2, 1)
+    plt.plot(signal)
+    plt.title("Original Signal")
+
+    # 주파수 영역에서의 파워 스펙트럼
+    plt.subplot(1, 2, 2)
+    plt.plot(power_spectrum)
+    plt.title("Power Spectrum")
+
+    plt.tight_layout()
+    plt.show()
+
+# 예시 실행
+signal = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])  # 신호를 적절히 수정해주세요.
+apply_fourier_transform(signal)
