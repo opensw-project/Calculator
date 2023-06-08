@@ -3,3 +3,5 @@ while 1:
     if d=="Friday":
         break
     print("pullreqesut") 
+     
+     

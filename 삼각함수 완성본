@@ -6,7 +6,7 @@ result = math.sin(math.radians(angle))
 elif trig_function == "cos":
 result = math.cos(math.radians(angle))
 elif trig_function == "tan":
-result = math.tan(math.radians(angle))
+result = math.tan(math.radians(angle))  
 else:
 raise ValueError("잘못된 삼각함수입니다.")
 return result

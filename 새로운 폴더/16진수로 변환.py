@@ -7,4 +7,4 @@ def decimal_to_hexadecimal(decimal):
         else:
             hexadecimal = chr(remainder + 55) + hexadecimal
         decimal //= 16
-    return hexadecimal
+    return hexadecimal  

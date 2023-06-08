@@ -4,7 +4,7 @@ def lcm(a, b):
     return a * b // gcd(a, b)
 
 def get_lcm(numbers):
-    lcm_value = numbers[0]
+    lcm_value = numbers[0]  
     for number in numbers[1:]:
         lcm_value = lcm(lcm_value, number)
     return lcm_value

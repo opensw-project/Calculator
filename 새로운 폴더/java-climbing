@@ -1,0 +1,47 @@
+public class HillClimbing {
+    public static double optimize(double x) {
+        double stepSize = 0.01; // ステップサイズ
+        double current = x;
+        double best = current;
+
+        while (true) {
+            double next1 = current + stepSize; // 右方向への移動
+            double next2 = current - stepSize; // 左方向への移動
+
+            // 目的関数の評価
+            double currentValue = objectiveFunction(current);
+            double nextValue1 = objectiveFunction(next1);
+            double nextValue2 = objectiveFunction(next2);
+
+            // 最良の解を更新
+            if (nextValue1 > currentValue && nextValue1 > nextValue2) {
+                best = next1;
+            } else if (nextValue2 > currentValue && nextValue2 > nextValue1) {
+                best = next2;
+            }
+
+            // 終了条件
+            if (best == current) {
+                break;
+            }
+
+            current = best;
+        }
+
+        return best;
+    }
+
+    // 最適化する目的関数（仮の例）
+    public static double objectiveFunction(double x) {
+        return -x * x + 5 * x; // y = -x^2 + 5x
+    }
+
+    public static void main(String[] args) {
+        double initialX = 2.0; // 初期値
+
+        double optimizedX = optimize(initialX);
+
+        System.out.println("Optimized X: " + optimizedX);
+        System.out.println("Objective Function Value: " + objectiveFunction(optimizedX));
+    }
+}

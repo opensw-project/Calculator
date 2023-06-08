@@ -18,3 +18,4 @@ avl_tree.delete(3)
 
 # 전체 트리 출력
 avl_tree.print_tree()
+ 

@@ -7,4 +7,4 @@ proposition = input("명제를 입력하세요: ")
 
 # 명제 계산
 result = evaluate_proposition(proposition)
-print(f"명제 계산 결과: {result}")
+print(f"명제 계산 결과: {result}")  
