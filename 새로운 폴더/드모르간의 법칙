@@ -1,0 +1,26 @@
+# NOT(AND)의 드모르간의 법칙
+def demorgan_and(a, b):
+    result = not (a and b)
+    demorgan_result = (not a) or (not b)
+    return result, demorgan_result
+
+# NOT(OR)의 드모르간의 법칙
+def demorgan_or(a, b):
+    result = not (a or b)
+    demorgan_result = (not a) and (not b)
+    return result, demorgan_result
+
+# 예시 실행
+A = True
+B = False
+
+result1, demorgan_result1 = demorgan_and(A, B)
+result2, demorgan_result2 = demorgan_or(A, B)
+
+print("NOT(AND)의 드모르간의 법칙:")
+print("~(A && B) =", result1)
+print("~A || ~B =", demorgan_result1)
+
+print("\nNOT(OR)의 드모르간의 법칙:")
+print("~(A || B) =", result2)
+print("~A && ~B =", demorgan_result2)
