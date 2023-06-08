@@ -3,4 +3,4 @@ def calculate_cubic_function(a, b, c, d, x):
     return result. 
 
 a = float(input("a 값을 입력하세요: "))
-b = float(input("b 값을 입력하세요: "))
+b = float(input("b 값을 입력하세요: "))  
