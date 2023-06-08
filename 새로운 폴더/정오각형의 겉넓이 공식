@@ -1,0 +1,11 @@
+import math
+
+def calculate_pentagon_area(side_length):
+    apothem = side_length / (2 * math.tan(math.pi / 5))
+    perimeter = 5 * side_length
+    area = 0.5 * apothem * perimeter
+    return area
+
+side = float(input("한 변의 길이를 입력하세요: "))
+pentagon_area = calculate_pentagon_area(side)
+print("정오각형의 겉넓이는", pentagon_area, "입니다.")
