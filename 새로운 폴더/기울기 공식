@@ -1,0 +1,13 @@
+def slope_formula(x1, y1, x2, y2):
+    # 기울기 계산
+    slope = (y2 - y1) / (x2 - x1)
+
+    return slope
+
+# 예시: (2, 3)과 (5, 7) 두 점 사이의 기울기 구하기
+x1 = 2
+y1 = 3
+x2 = 5
+y2 = 7
+slope = slope_formula(x1, y1, x2, y2)
+print("기울기:", slope)
