@@ -1,0 +1,25 @@
+def gcd(a, b):
+    # 최대공약수를 계산하는 함수
+    while b:
+        a, b = b, a % b
+    return a
+
+def gcd_of_list(numbers):
+    # 리스트의 숫자들의 최대공약수를 계산하는 함수
+    if len(numbers) == 0:
+        return None
+    gcd_result = numbers[0]
+    for i in range(1, len(numbers)):
+        gcd_result = gcd(gcd_result, numbers[i])
+    return gcd_result
+
+# 예시: 24와 36의 최대공약수 계산
+num1 = 24
+num2 = 36
+result = gcd(num1, num2)
+print(f"{num1}과 {num2}의 최대공약수: {result}")
+
+# 예시: 리스트의 숫자들의 최대공약수 계산
+number_list = [24, 36, 48, 60]
+result = gcd_of_list(number_list)
+print(f"리스트 {number_list}의 숫자들의 최대공약수: {result}")
