@@ -1,0 +1,20 @@
+import math
+
+def double_angle_formula(angle):
+    # 각도를 라디안으로 변환
+    radian = math.radians(angle)
+
+    # 삼각함수를 이용하여 배각값 계산
+    sin_double = 2 * math.sin(radian) * math.cos(radian)
+    cos_double = math.cos(radian)**2 - math.sin(radian)**2
+    tan_double = math.tan(radian)**2 / (1 - math.tan(radian)**2)
+
+    # 라디안을 다시 각도로 변환
+    angle_double = math.degrees(math.atan(tan_double))
+
+    return angle_double
+
+# 예시: 30도의 배각값 구하기
+angle = 30
+double_angle = double_angle_formula(angle)
+print("배각값:", double_angle)
