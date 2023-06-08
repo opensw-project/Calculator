@@ -1,0 +1,16 @@
+def vector_subtraction(v1, v2):
+    # 벡터의 차를 계산하는 함수
+    if len(v1) != len(v2):
+        raise ValueError("벡터의 길이가 일치하지 않습니다.")
+    result = []
+    for i in range(len(v1)):
+        result.append(v1[i] - v2[i])
+    return result
+
+# 예시: 벡터의 차 계산
+vector1 = [1, 2, 3]
+vector2 = [4, 5, 6]
+result = vector_subtraction(vector1, vector2)
+print(f"벡터1: {vector1}")
+print(f"벡터2: {vector2}")
+print(f"벡터의 차: {result}")
