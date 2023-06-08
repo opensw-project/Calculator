@@ -2,7 +2,7 @@ from sympy import symbols, integrate, sin
 
 # 사용 예시
 x = symbols('x')
-u = x
+u = x  
 v = sin(x)
 
 result = u * v - integrate(u.diff(x) * v, x)
