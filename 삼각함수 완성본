@@ -19,5 +19,5 @@ break
 trig_function_input = input("삼각함수를 입력하세요 (sin, cos, tan): ")
 result = calculate_trigonometry(angle_input, trig_function_input)
 print("결과: ", result)
-except ValueError as e:
+except ValueError as e:  
 print(str(e))
