@@ -3,7 +3,7 @@ import math
 def calculate_distance(x1, y1, x2, y2):
     distance = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
     return distance
-
+  
 # 사용 예시
 x1 = float(input("첫 번째 점의 x 좌표를 입력하세요: "))
 y1 = float(input("첫 번째 점의 y 좌표를 입력하세요: "))
