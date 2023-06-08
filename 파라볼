@@ -10,7 +10,7 @@ def calculate_parabola_radius_of_curvature(a, x):
 
 # 사용 예시
 a = float(input("파라볼라의 a 값을 입력하세요: "))
-x = float(input("접선을 계산할 x 좌표를 입력하세요: "))
+x = float(input("접선을 계산할 x 좌표를 입력하세요: "))  
 
 tangent_length = calculate_parabola_tangent_length(a, x)
 radius_of_curvature = calculate_parabola_radius_of_curvature(a, x)

@@ -3,3 +3,4 @@ import numpy as np
 # 2x3 크기의 행렬 생성
 matrix = np.array([[1, 2, 3], [4, 5, 6]])
 print(matrix)
+ 

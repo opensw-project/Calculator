@@ -1,6 +1,6 @@
 # 데코레이터의 기본 구문
 def decorator_function(original_function):
-    def wrapper_function(*args, **kwargs):
+    def wrapper_function(*args,  **kwargs):
         # 기능 추가 또는 변경 코드 작성
         # ...
         result = original_function(*args, **kwargs)

@@ -3,7 +3,7 @@
 규칙  
      - 누구나 코드를 업로드 할 수 있다.  
      - 코드를 업로드 하면 가능한 모든 사람이 코멘트를 통해 의견을 표출한다.  
-     - 코드는 1명이상의 검토와 동의가 있어야 메인에 편입할 수 있다.  
+     - 코드는 1명이상의 검토와 동의가 있어야 메인에 편입할 수 있다.    
      - 조직 멤버 이외의 사람이 코드를 제안하면 5명이상의 검토와 동의를 거쳐 편입할 수 있다.  
      - 라이센스는 GPL 2.0을 사용한다.
        
@@ -25,4 +25,5 @@ Qoida
       - Kodni va sharhlar orqali o'z fikrini bildira oladigan har bir kishini yuklang.  
       - Kod kamida uch kishining ko'rib chiqishi va roziligi bilan asosiy kodga kiritilishi mumkin.  
       - Agar tashkilot a'zosi bo'lmagan shaxs kod taklif qilsa, u ko'rib chiqilib, 5 yoki undan ortiq kishining roziligidan so'ng kiritilishi mumkin.  
-      - Litsenziya GPL 2.0 dan foydalanadi.  
+      - Litsenziya GPL 2.0 dan foydalanadi. 
+      

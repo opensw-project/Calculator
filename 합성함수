@@ -7,11 +7,11 @@ def calculate_composite_function(f, g, x):
         g (function): 두 번째 함수.
         x (float): 입력 값.
 
-    Returns:
+    Returns:  
         float: 합성함수의 결과.
     """
     return f(g(x))
-
+  
 # 사용자로부터 첫 번째 함수와 두 번째 함수를 입력받습니다.
 f_expression = input("첫 번째 함수의 수식을 입력하세요: ")
 g_expression = input("두 번째 함수의 수식을 입력하세요: ")
