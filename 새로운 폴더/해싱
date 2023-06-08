@@ -11,4 +11,4 @@ price = hash_table.get("apple")
 if price:
     print("Apple price:", price)
 else:
-    print("Apple not found in hash table")
+    print("Apple not found in hash table") 
