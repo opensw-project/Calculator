@@ -13,6 +13,6 @@ radius = float(input("구의 반지름을 입력하세요: "))
 sphere_volume = calculate_sphere_volume(radius)
 sphere_surface_area = calculate_sphere_surface_area(radius)
 
-print("구 계산 결과:")
+print("구 계산 결과:") 
 print(f"부피: {sphere_volume}")
 print(f"표면적: {sphere_surface_area}")

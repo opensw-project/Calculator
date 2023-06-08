@@ -1,5 +1,5 @@
 def mathematical_induction(n, base_case, inductive_step):
-    if n == 1:
+    if n == 1:  
         return base_case
     else:
         return inductive_step(n, mathematical_induction(n-1, base_case, inductive_step))
@@ -11,6 +11,6 @@ def base_case(n):
 def inductive_step(n, previous_result):
     return previous_result + n
 
-n = 5
+n = 5  
 result = mathematical_induction(n, base_case, inductive_step)
 print(result)  # 출력: 15

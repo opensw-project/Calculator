@@ -2,7 +2,7 @@ def calculate_vector_composition(vectors):
     """
     주어진 벡터들의 합성을 계산합니다.
 
-    Args:
+    Args:  
         vectors (list): 벡터들의 리스트.
 
     Returns:

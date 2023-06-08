@@ -1,0 +1,27 @@
+from sympy import symbols, sympify
+
+def calculate_average_rate_of_change(expression, variable, x1, x2):
+    x = symbols(variable)
+    f = sympify(expression)
+
+    # 두 점의 x-값
+    x_1 = x1
+    x_2 = x2
+
+    # 두 점에서의 함수 값
+    f_1 = f.subs(x, x_1)
+    f_2 = f.subs(x, x_2)
+
+    # 평균 변화율 계산
+    average_rate_of_change = (f_2 - f_1) / (x_2 - x_1)
+
+    return average_rate_of_change
+
+# 사용 예시
+expression = input("함수를 입력하세요: ")
+variable = input("변화율을 계산할 변수를 입력하세요: ")
+x1 = float(input("첫 번째 x-값을 입력하세요: "))
+x2 = float(input("두 번째 x-값을 입력하세요: "))
+
+average_rate = calculate_average_rate_of_change(expression, variable, x1, x2)
+print("평균 변화율:", average_rate)
