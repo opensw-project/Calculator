@@ -5,7 +5,7 @@ lambda arguments: expression
 addition = lambda x, y: x + y
 
 # ラムダ式を使用して計算を行う
-result = addition(5, 3)
+result = addition(5, 3) 
 print(result)  # 結果: 8
 
 # ラムダ式を使用してリストの要素を2倍にする
