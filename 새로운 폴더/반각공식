@@ -1,0 +1,20 @@
+import math
+
+def half_angle_formula(angle):
+    # 각도를 라디안으로 변환
+    radian = math.radians(angle)
+
+    # 삼각함수를 이용하여 반각값 계산
+    sin_half = math.sqrt((1 - math.cos(radian)) / 2)
+    cos_half = math.sqrt((1 + math.cos(radian)) / 2)
+    tan_half = sin_half / cos_half
+
+    # 라디안을 다시 각도로 변환
+    angle_half = math.degrees(math.atan(tan_half))
+
+    return angle_half
+
+# 예시: 45도의 반각값 구하기
+angle = 45
+half_angle = half_angle_formula(angle)
+print("반각값:", half_angle)
