@@ -17,3 +17,4 @@ auxiliary = 'B'  # 一時的な位置
 
 # ハノイの塔の呼び出し
 hanoi(n, source, target, auxiliary)
+v

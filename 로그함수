@@ -1,4 +1,4 @@
-import math
+import math. 
 
 def calculate_logarithm(base, number):
 result = math.log(number, base)

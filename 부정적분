@@ -4,5 +4,5 @@ from sympy import Symbol, integrate
 x = Symbol('x')
 f = x**2 + 2*x + 1
 
-antiderivative = integrate(f, x)
+antiderivative = integrate(f, x)  
 print(antiderivative)  # 출력: x**3/3 + x**2 + x

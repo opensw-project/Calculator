@@ -1,0 +1,17 @@
+def vector_addition(vector_list):
+    # 벡터들의 합을 계산하는 함수
+    if len(vector_list) == 0:
+        return None
+    vector_size = len(vector_list[0])
+    result = [0] * vector_size
+    for vector in vector_list:
+        if len(vector) != vector_size:
+            raise ValueError("벡터의 길이가 일치하지 않습니다.")
+        result = [result[i] + vector[i] for i in range(vector_size)]
+    return result
+
+# 예시: 벡터들의 합 계산
+vectors = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+result = vector_addition(vectors)
+print(f"벡터들: {vectors}")
+print(f"벡터들의 합: {result}")

@@ -1,0 +1,19 @@
+from sympy import symbols, diff, sympify
+
+def calculate_instantaneous_rate_of_change(expression, variable, x_value):
+    x = symbols(variable)
+    f = sympify(expression)
+
+    # 순간 변화율 계산
+    f_prime = diff(f, x)
+    rate_of_change = f_prime.subs(x, x_value)
+
+    return rate_of_change
+
+# 사용 예시
+expression = input("함수를 입력하세요: ")
+variable = input("변화율을 계산할 변수를 입력하세요: ")
+x_value = float(input("변화율을 계산할 x-값을 입력하세요: "))
+
+instantaneous_rate = calculate_instantaneous_rate_of_change(expression, variable, x_value)
+print("순간 변화율:", instantaneous_rate)

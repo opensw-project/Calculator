@@ -1,0 +1,19 @@
+import math
+
+def calculate_parabola_tangent_length(a, x):
+    tangent_length = abs(2 * a * x)
+    return tangent_length
+
+def calculate_parabola_radius_of_curvature(a, x):
+    radius_of_curvature = (1 + (4 * a**2 * x**2))**(3/2) / (4 * abs(a * x))
+    return radius_of_curvature
+
+# 사용 예시
+a = float(input("파라볼라의 a 값을 입력하세요: "))
+x = float(input("접선을 계산할 x 좌표를 입력하세요: "))
+
+tangent_length = calculate_parabola_tangent_length(a, x)
+radius_of_curvature = calculate_parabola_radius_of_curvature(a, x)
+
+print("접선의 길이:", tangent_length)
+print("곡률 반경:", radius_of_curvature) 

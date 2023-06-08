@@ -11,5 +11,5 @@ discriminant = (b ** 2) - (4 * a * c)
 # 근의 공식 계산
 root1 = (-b + cmath.sqrt(discriminant)) / (2 * a)
 root2 = (-b - cmath.sqrt(discriminant)) / (2 * a)
-
+  
 return root1, root2

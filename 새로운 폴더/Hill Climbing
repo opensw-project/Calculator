@@ -10,5 +10,3 @@ def hill_climbing(problem):
         if problem.calculate_fitness(best_neighbor) <= problem.calculate_fitness(current_state):
             return current_state
 
-        current_state =  best_neighbor
- 
