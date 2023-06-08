@@ -7,7 +7,7 @@ def calculate_composite_function(f, g, x):
         g (function): 두 번째 함수.
         x (float): 입력 값.
 
-    Returns:
+    Returns:  
         float: 합성함수의 결과.
     """
     return f(g(x))
