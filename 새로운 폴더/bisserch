@@ -10,3 +10,4 @@ def bit_search(elements):
         result.append(subset)
 
     return result
+  
