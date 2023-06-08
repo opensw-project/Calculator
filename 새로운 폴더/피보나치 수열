@@ -1,0 +1,17 @@
+def fibonacci_recursive(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
+    else:
+        sequence = fibonacci_recursive(n-1)
+        next_number = sequence[-1] + sequence[-2]
+        sequence.append(next_number)
+        return sequence
+
+# 예시 실행
+n = int(input("피보나치 수열의 길이를 입력하세요: "))
+fibonacci_sequence = fibonacci_recursive(n)
+print("피보나치 수열:", fibonacci_sequence)
