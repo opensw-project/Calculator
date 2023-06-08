@@ -1,0 +1,12 @@
+import math
+
+def area_of_equilateral_triangle(side_length):
+    # 정삼각형의 겉넓이 계산
+    area = (math.sqrt(3) / 4) * side_length**2
+
+    return area
+
+# 예시: 한 변의 길이가 5인 정삼각형의 겉넓이 구하기
+side_length = 5
+area = area_of_equilateral_triangle(side_length)
+print("정삼각형의 겉넓이:", area)
