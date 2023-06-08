@@ -1,3 +1,21 @@
+def compose(f, g):
+    # 두 함수 f와 g의 합성함수를 계산하는 함수
+    return lambda x: f(g(x))
+
+# 예시: f(x) = x^2, g(x) = 2x + 1 함수의 합성함수 계산
+def f(x):
+    return x**2
+
+def g(x):
+    return 2*x + 1
+
+h = compose(f, g)
+
+# 합성함수를 특정 값을 넣어 계산
+x = 2
+result = h(x)
+print(f"h({x}) = {result}")
+=======
 def gcd(a, b):
     # 최대공약수를 계산하는 함수
     while b:
