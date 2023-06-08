@@ -5,7 +5,7 @@ def calculate_acceleration(initial_velocity, final_velocity, time):
 # 사용 예시
 initial_velocity = 10  # 초기 속도 (단위: m/s)
 final_velocity = 30  # 최종 속도 (단위: m/s)
-time = 5  # 시간 (단위: 초)
+time = 5  # 시간 (단위: 초) 
 
 acceleration = calculate_acceleration(initial_velocity, final_velocity, time)
 print(acceleration)  # 출력: 4.0 (단위: m/s^2)
