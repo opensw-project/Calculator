@@ -1,0 +1,15 @@
+import numpy as np
+
+def calculate_curvature(position, first_derivative, second_derivative):
+    cross_product = np.cross(first_derivative, second_derivative)
+    numerator = np.linalg.norm(cross_product)
+    denominator = np.linalg.norm(first_derivative) ** 3
+    curvature = numerator / denominator
+    return curvature
+
+# 예시 실행
+position = np.array([1, 2, 3])  # 곡선의 위치 벡터를 적절히 수정해주세요.
+first_derivative = np.array([4, 5, 6])  # 곡선의 1차 미분 벡터를 적절히 수정해주세요.
+second_derivative = np.array([7, 8, 9])  # 곡선의 2차 미분 벡터를 적절히 수정해주세요.
+curvature = calculate_curvature(position, first_derivative, second_derivative)
+print("곡률:", curvature)
