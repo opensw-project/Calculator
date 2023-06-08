@@ -1,0 +1,15 @@
+def geometric_series(a, r, n):
+    # 등비급수의 합 계산
+    if abs(r) < 1:
+        series_sum = a * (1 - r**n) / (1 - r)
+    else:
+        series_sum = float('inf')  # 발산하는 경우
+
+    return series_sum
+
+# 예시: 1/2 + 1/4 + 1/8 + ... 의 합 구하기 (a=1, r=1/2)
+a = 1
+r = 1/2
+n = float('inf')  # 무한대
+sum_of_series = geometric_series(a, r, n)
+print("등비급수의 합:", sum_of_series)
