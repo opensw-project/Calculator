@@ -4,6 +4,6 @@ import numpy
 a = int(input("Input natural number 'a' : "))
 b = int(input("Input natural nunber 'b' : "))
 
-c = math.sqrt(a2 + b2)
+c = math.sqrt(a2 + b2)  
 
 print(round(c,2)) 

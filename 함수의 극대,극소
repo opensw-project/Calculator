@@ -1,5 +1,5 @@
 from scipy.optimize import minimize
-
+  
 # 사용 예시
 def f(x):
     return x**3 - 6*x**2 + 9*x + 1

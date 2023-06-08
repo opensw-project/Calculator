@@ -1,0 +1,60 @@
+import java.util.*;
+
+public class BreadthFirstSearch {
+    private static class Node {
+        int value;
+        List<Node> neighbors;
+        boolean visited;
+
+        Node(int value) {
+            this.value = value;
+            this.neighbors = new ArrayList<>();
+            this.visited = false;
+        }
+
+        void addNeighbor(Node neighbor) {
+            neighbors.add(neighbor);
+        }
+    }
+
+    public static void breadthFirstSearch(Node start) {
+        Queue<Node> queue = new LinkedList<>();
+
+        // スタートノードをキューに追加
+        queue.offer(start);
+        start.visited = true;
+
+        while (!queue.isEmpty()) {
+            // キューからノードを取り出す
+            Node current = queue.poll();
+            System.out.println(current.value);
+
+            // 隣接ノードをチェックし、未訪問のノードをキューに追加
+            for (Node neighbor : current.neighbors) {
+                if (!neighbor.visited) {
+                    queue.offer(neighbor);
+                    neighbor.visited = true;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        // グラフの作成
+        Node node1 = new Node(1);
+        Node node2 = new Node(2);
+        Node node3 = new Node(3);
+        Node node4 = new Node(4);
+        Node node5 = new Node(5);
+
+        node1.addNeighbor(node2);
+        node1.addNeighbor(node3);
+        node2.addNeighbor(node4);
+        node3.addNeighbor(node4);
+        node3.addNeighbor(node5);
+        node4.addNeighbor(node5);
+
+        // 幅優先探索の実行
+        breadthFirstSearch(node1);
+    }
+}

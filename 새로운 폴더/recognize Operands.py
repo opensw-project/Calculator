@@ -17,3 +17,4 @@ def recognize_Operands(infix):
             recognized.append(infix[i])
             i += 1
     return recognized
+ 

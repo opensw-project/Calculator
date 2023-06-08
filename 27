@@ -1,0 +1,14 @@
+def scalar_multiplication(scalar, vector):
+    # 스칼라와 벡터의 곱을 계산하는 함수
+    result = []
+    for i in range(len(vector)):
+        result.append(scalar * vector[i])
+    return result
+
+# 예시: 스칼라와 벡터의 곱 계산
+scalar = 3
+vector = [1, 2, 3]
+result = scalar_multiplication(scalar, vector)
+print(f"스칼라: {scalar}")
+print(f"벡터: {vector}")
+print(f"곱 결과: {result}")

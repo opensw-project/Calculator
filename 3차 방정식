@@ -1,6 +1,6 @@
 def calculate_cubic_function(a, b, c, d, x):
     result = a * x**3 + b * x**2 + c * x + d
-    return result
+    return result. 
 
 a = float(input("a 값을 입력하세요: "))
-b = float(input("b 값을 입력하세요: "))
+b = float(input("b 값을 입력하세요: "))  
