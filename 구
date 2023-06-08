@@ -1,0 +1,12 @@
+import math
+
+def calculate_sphere_volume(radius):
+    volume = (4/3) * math.pi * radius**3
+    return volume
+
+# 사용 예시
+radius = float(input("구의 반지름을 입력하세요: "))
+
+volume = calculate_sphere_volume(radius)
+
+print("구의 부피:", volume) 
