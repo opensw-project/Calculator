@@ -4,7 +4,7 @@ def calculate_parallelogram_area(base, height):
     area = base * height
     return area
 
-def calculate_parallelogram_perimeter(base, side):
+def calculate_parallelogram_perimeter(base, side):  
     perimeter = 2 * (base + side)
     return perimeter
 
