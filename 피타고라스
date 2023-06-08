@@ -6,4 +6,4 @@ b = int(input("Input natural nunber 'b' : "))
 
 c = math.sqrt(a2 + b2)
 
-print(round(c,2))
+print(round(c,2)) 
