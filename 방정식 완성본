@@ -6,3 +6,4 @@ else:
 print("해: ")
 for solution in solutions:
 print(solution)
+  
