@@ -1,0 +1,9 @@
+import math
+
+def calculate_pentagon_height(side_length):
+    height = side_length * (1 + math.sqrt(5)) / 2
+    return height
+
+side = float(input("한 변의 길이를 입력하세요: "))
+pentagon_height = calculate_pentagon_height(side)
+print("정오각형의 높이는", pentagon_height, "입니다.")
