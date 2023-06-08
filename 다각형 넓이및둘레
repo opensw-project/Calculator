@@ -4,7 +4,7 @@ def calculate_polygon_area(sides, length):
     """
     다각형의 넓이를 계산합니다.
 
-    Args:
+    Args:  
         sides (int): 다각형의 변의 수.
         length (float): 각 변의 길이.
 
