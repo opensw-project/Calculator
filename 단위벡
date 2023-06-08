@@ -5,7 +5,7 @@ def calculate_unit_vector(vector):
     unit_vector = vector / norm    # 단위벡터 계산
     return unit_vector
 
-# 사용 예시
+# 사용 예시  
 n = int(input("벡터의 차원을 입력하세요: "))
 
 vector = []
