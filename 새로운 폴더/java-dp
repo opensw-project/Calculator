@@ -1,0 +1,30 @@
+public class DynamicProgrammingExample {
+    public static int fibonacci(int n) {
+        // メモ化配列
+        int[] memo = new int[n + 1];
+        return fibonacciHelper(n, memo);
+    }
+
+    private static int fibonacciHelper(int n, int[] memo) {
+        // ベースケース
+        if (n <= 1) {
+            return n;
+        }
+
+        // メモが存在する場合、再計算せずに結果を返す
+        if (memo[n] != 0) {
+            return memo[n];
+        }
+
+        // 再帰的な呼び出しとメモ化
+        memo[n] = fibonacciHelper(n - 1, memo) + fibonacciHelper(n - 2, memo);
+
+        return memo[n];
+    }
+
+    public static void main(String[] args) {
+        int n = 10;
+        int result = fibonacci(n);
+        System.out.println("Fibonacci(" + n + ") = " + result);
+    }
+}

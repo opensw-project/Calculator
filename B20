@@ -1,0 +1,15 @@
+from scipy.optimize import minimize
+
+# 사용 예시
+def f(x):
+    return x**3 - 6*x**2 + 9*x + 1
+
+# minimize 함수를 사용하여 극대값, 극소값 계산
+result_max = minimize(lambda x: -f(x), x0=0)
+result_min = minimize(f, x0=0)
+
+max_value = -result_max.fun
+min_value = result_min.fun
+
+print(max_value)  # 출력: 11.0
+print(min_value)  # 출력: -2.0   

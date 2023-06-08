@@ -12,3 +12,4 @@ for t, x, y in plans:
         exit()
     st, sx, sy = t, x, y
 print('Yes')
+ 
