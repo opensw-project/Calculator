@@ -1,0 +1,30 @@
+from sympy import symbols, diff
+
+def calculate_tangent_equation(expression, variable, x_value):
+    """
+    주어진 함수의 접선의 방정식을 계산합니다.
+
+    Args:
+        expression (str): 함수의 수식.
+        variable (str): 독립 변수.
+        x_value (float): 접선이 위치한 x 좌표.
+
+    Returns:
+        str: 접선의 방정식.
+    """
+    x = symbols(variable)
+    f = eval(expression)
+    slope = diff(f, x).subs(x, x_value)
+    tangent_equation = slope * (x - x_value) + f.subs(x, x_value)
+    return str(tangent_equation)
+
+# 사용자로부터 함수의 수식, 독립 변수, 접선의 위치 x 좌표를 입력받습니다.
+expression = input("함수의 수식을 입력하세요: ")
+variable = input("독립 변수를 입력하세요: ")
+x_value = float(input("접선이 위치한 x 좌표를 입력하세요: "))
+
+# 접선의 방정식을 계산합니다.
+tangent_equation = calculate_tangent_equation(expression, variable, x_value)
+
+# 결과를 출력합니다.
+print("접선의 방정식:", tangent_equation)
