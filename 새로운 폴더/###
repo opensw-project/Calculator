@@ -1,0 +1,21 @@
+while True:
+    a,b = map(int,input().split())
+    if a==0 and b==0:
+        break
+    
+    for i in range(a):
+        if i%2==0:
+            for j in range(b):
+                if j%2==0:
+                    print("#",end="")
+                else:
+                    print(".",end="")
+            print()
+        else:
+            for j in range(b):
+                if j%2==0:
+                    print(".",end="")
+                else:
+                    print("#",end="")
+            print()
+    print()

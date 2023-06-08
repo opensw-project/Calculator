@@ -1,0 +1,39 @@
+import math
+
+def calculate_polygon_area(sides, length):
+    """
+    다각형의 넓이를 계산합니다.
+
+    Args:
+        sides (int): 다각형의 변의 수.
+        length (float): 각 변의 길이.
+
+    Returns:
+        float: 다각형의 넓이.
+    """
+    return (sides * length**2) / (4 * math.tan(math.pi / sides))
+
+def calculate_polygon_perimeter(sides, length):
+    """
+    다각형의 둘레를 계산합니다.
+
+    Args:
+        sides (int): 다각형의 변의 수.
+        length (float): 각 변의 길이.
+
+    Returns:
+        float: 다각형의 둘레.
+    """
+    return sides * length
+
+# 사용자로부터 다각형의 정보를 입력받습니다.
+sides = int(input("다각형의 변의 수를 입력하세요: "))
+length = float(input("다각형의 변의 길이를 입력하세요: "))
+
+# 다각형의 넓이와 둘레를 계산합니다.
+area = calculate_polygon_area(sides, length)
+perimeter = calculate_polygon_perimeter(sides, length)
+
+# 결과를 출력합니다.
+print("다각형의 넓이:", area)
+print("다각형의 둘레:", perimeter)

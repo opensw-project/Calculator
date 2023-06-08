@@ -1,0 +1,10 @@
+from sympy import symbols, integrate
+
+# 사용 예시
+x = symbols('x')
+u = 2*x + 3
+
+integrand = u**3
+result = integrate(integrand, x)
+
+print(result)  # 출력: (x + 3)**4 / 8

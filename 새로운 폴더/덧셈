@@ -1,0 +1,21 @@
+public class Add
+{
+    private int a;
+    private int b;
+    /**
+     * Add 클래스의 객체 생성자
+     */
+    public Add(int a, int b)
+    {
+        
+        this.a = a;
+        this.b = b;
+    }
+    public int calculate(){
+        return this.a + this.b;
+    }
+    public void sefValue(int a, int b){
+        this.a = a;
+        this.b = b;
+    }
+}

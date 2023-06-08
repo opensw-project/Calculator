@@ -4,4 +4,4 @@ def decimal_to_quaternary(decimal):
         remainder = decimal % 4
         quaternary = str(remainder) + quaternary
         decimal //= 4
-    return quaternary
+    return quaternary   

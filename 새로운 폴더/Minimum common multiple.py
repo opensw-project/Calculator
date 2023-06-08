@@ -11,3 +11,4 @@ def lcm(a, b):
         greater += 1
 
     return lcm
+ 
