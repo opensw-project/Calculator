@@ -81,3 +81,5 @@ class AVLTree:
             self._in_order_traversal(node.left)
             print(node.value)
             self._in_order_traversal(node.right)
+
+ 
