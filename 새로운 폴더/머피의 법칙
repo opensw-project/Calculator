@@ -1,0 +1,13 @@
+import random
+
+def murphys_law():
+    event_probability = random.uniform(0, 1)
+    if event_probability < 0.5:
+        raise Exception("Something went wrong!")
+    else:
+        print("Everything is going smoothly!")
+
+try:
+    murphys_law()
+except Exception as e:
+    print("According to Murphy's Law:", e)
