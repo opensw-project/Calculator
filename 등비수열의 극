@@ -8,7 +8,7 @@ def geometric_series_limit(a, r):
 
 # 사용 예시
 a = 1  # 초기 항
-r = 0.5  # 공비
+r = 0.5  # 공비  
 
 limit_value = geometric_series_limit(a, r)
 print(limit_value)  # 출력: 2.0
