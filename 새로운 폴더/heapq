@@ -10,7 +10,7 @@ def dijkstra(graph, start):
 
     while pq:
         # 最短距離のノードを取り出す
-        dist, node = heapq.heappop(pq)
+        dist, node = heapq.heappop(pq) 
 
         # 現在のノードからの距離が既に計算済みの距離よりも大きければスキップ
         if dist > distances[node]:
