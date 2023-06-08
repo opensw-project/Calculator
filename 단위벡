@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np. 
 
 def calculate_unit_vector(vector):
     norm = np.linalg.norm(vector)  # 벡터의 크기 계산
