@@ -11,6 +11,6 @@ def base_case(n):
 def inductive_step(n, previous_result):
     return previous_result + n
 
-n = 5
+n = 5  
 result = mathematical_induction(n, base_case, inductive_step)
 print(result)  # 출력: 15
