@@ -3,7 +3,7 @@ public class CactusOutputExample {
     public static void main(String[] args) {
         String cactus = 
             "   ^   \n" +
-            "  ^^^  \n" +
+            "  ^^^  \n" + 
             " ^^^^^ \n" +
             "  ^^^  \n" +
             "   |   ";
