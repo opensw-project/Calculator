@@ -1,0 +1,17 @@
+def summation_formula(start, end, term_function):
+    # 합 초기화
+    total = 0
+
+    # 각 항을 더하여 합 계산
+    for i in range(start, end + 1):
+        term = term_function(i)
+        total += term
+
+    return total
+
+# 예시: 1부터 100까지의 합 구하기
+start = 1
+end = 100
+term_function = lambda x: x  # 각 항은 자기 자신
+sum_of_terms = summation_formula(start, end, term_function)
+print("원리합계:", sum_of_terms)
