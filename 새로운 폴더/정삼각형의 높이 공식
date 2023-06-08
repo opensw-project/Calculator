@@ -1,0 +1,12 @@
+import math
+
+def height_of_equilateral_triangle(side_length):
+    # 정삼각형의 높이 계산
+    height = (math.sqrt(3) / 2) * side_length
+
+    return height
+
+# 예시: 한 변의 길이가 5인 정삼각형의 높이 구하기
+side_length = 5
+height = height_of_equilateral_triangle(side_length)
+print("정삼각형의 높이:", height)
