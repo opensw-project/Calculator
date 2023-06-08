@@ -9,7 +9,7 @@ public class SelectionSort {
             for (int j = i + 1; j < n; j++) {
                 if (arr[j] < arr[minIndex]) {
                     minIndex = j;
-                }
+                }  
             }
 
             // 最小値をi番目の要素と交換する
