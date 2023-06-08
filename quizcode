@@ -6,7 +6,7 @@ class Quiz:
 
     def display_question(self):
         print(self.question)
-        for i, choice in enumerate(self.choices):
+        for i, choice in enumerate(self.choices):  
             print(f"{i+1}. {choice}")
 
     def check_answer(self, user_choice):
