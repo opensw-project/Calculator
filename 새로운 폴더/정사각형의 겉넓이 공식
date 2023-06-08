@@ -1,0 +1,7 @@
+def calculate_square_area(side_length):
+    area = side_length ** 2
+    return area
+
+side = float(input("한 변의 길이를 입력하세요: "))
+square_area = calculate_square_area(side)
+print("정사각형의 겉넓이는", square_area, "입니다.")
