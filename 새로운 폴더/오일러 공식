@@ -1,0 +1,14 @@
+import cmath
+
+def calculate_euler_formula(theta):
+    complex_number = cmath.exp(1j * theta)
+    return complex_number
+
+# 예시 실행
+theta = 0.5  # 각도를 적절히 수정해주세요.
+result = calculate_euler_formula(theta)
+print("오일러 공식 결과:", result)
+print("실수 부분:", result.real)
+print("허수 부분:", result.imag)
+print("절댓값:", abs(result))
+print("위상 각도:", cmath.phase(result))
