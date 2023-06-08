@@ -8,7 +8,7 @@ def hanoi(n, source, target, auxiliary):
 
         # n-1枚の円盤を auxiliary から target へ移動
         hanoi(n-1, auxiliary, target, source)
-
+  
 # テスト用の呼び出し
 n = 3  # 円盤の数
 source = 'A'  # 開始位置
