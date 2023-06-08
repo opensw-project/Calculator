@@ -7,7 +7,7 @@ def calculate_intersection(expression1, expression2, variable):
     Args:
         expression1 (str): 첫 번째 함수의 수식.
         expression2 (str): 두 번째 함수의 수식.
-        variable (str): 변수.
+        variable (str): 변수.  
 
     Returns:
         list: 접점의 리스트.
