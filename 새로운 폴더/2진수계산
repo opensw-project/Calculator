@@ -24,3 +24,4 @@ print(result_mod)  # 결과: '0b1010' (10의 이진수)
 # 이진수 간 거듭제곱
 result_pow = bin(a ** b)
 print(result_pow)  # 결과: '0b10000000000' (1024의 이진수)
+  
