@@ -5,4 +5,4 @@ x = Symbol('x')
 f = x**2 + 2*x + 1
 
 integral = integrate(f, (x, 0, 1))
-print(integral)  # 출력: 4/3
+print(integral)  # 출력: 4/3. 
