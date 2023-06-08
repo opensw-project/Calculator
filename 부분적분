@@ -4,7 +4,7 @@ from sympy import symbols, integrate, sin
 x = symbols('x')
 u = x
 v = sin(x)
-
+  
 result = u * v - integrate(u.diff(x) * v, x)
 
 print(result)  # 출력: -x*cos(x) + sin(x)
