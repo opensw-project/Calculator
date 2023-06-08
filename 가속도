@@ -2,7 +2,7 @@ def calculate_acceleration(initial_velocity, final_velocity, time):
     acceleration = (final_velocity - initial_velocity) / time
     return acceleration
 
-# 사용 예시
+# 사용 예시. 
 initial_velocity = 10  # 초기 속도 (단위: m/s)
 final_velocity = 30  # 최종 속도 (단위: m/s)
 time = 5  # 시간 (단위: 초)
