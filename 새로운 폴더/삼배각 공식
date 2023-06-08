@@ -1,0 +1,20 @@
+import math
+
+def triple_angle_formula(angle):
+    # 각도를 라디안으로 변환
+    radian = math.radians(angle)
+
+    # 삼각함수를 이용하여 삼배각값 계산
+    sin_triple = 3 * math.sin(radian) - 4 * math.sin(radian)**3
+    cos_triple = 4 * math.cos(radian)**3 - 3 * math.cos(radian)
+    tan_triple = (3 * math.tan(radian) - math.tan(radian)**3) / (1 - 3 * math.tan(radian)**2)
+
+    # 라디안을 다시 각도로 변환
+    angle_triple = math.degrees(math.atan(tan_triple))
+
+    return angle_triple
+
+# 예시: 45도의 삼배각값 구하기
+angle = 45
+triple_angle = triple_angle_formula(angle)
+print("삼배각값:", triple_angle)
