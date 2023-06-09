@@ -1,0 +1,270 @@
+while True:    #while문을 사용하여 사용자에게 입력받아서 계속 계산을 수행
+    choice = input("수식 선택>>")
+    if choice == '더하기' or choice == '+':
+        while True: 
+            try:    #예외처리와 안쪽에 반복문을 사용해서 숫자가 아닌 경우 "숫자를 입력하세요"를 출력하고 사용자에게 다른 값을 
+                num1 = float(input("첫번째 숫자>>"))
+                num2 = float(input("두번째 숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        print(num1, "+", num2, "=", cal.add(num1, num2))
+
+    elif choice == '빼기' or choice == '-':
+        while True:
+            try:
+                num1 = float(input("첫번째 숫자>>"))
+                num2 = float(input("두번째 숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        print(num1, "-", num2, "=", cal.subtract(num1,num2))
+
+    elif choice == '곱하기' or choice == '*':
+        while True: 
+            try:
+                num1 = float(input("첫번째 숫자>>"))
+                num2 = float(input("두번째 숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        print(num1, "*", num2, "=", cal.multiply(num1,num2))
+
+    elif choice == '나누기' or choice == '/':
+        while True: 
+            try:
+                num1 = float(input("첫번째 숫자>>"))
+                num2 = float(input("두번째 숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        print(num1, "/", num2, "=", cal.divide(num1,num2))
+
+    elif choice == '제곱' or choice == '**':
+        while True: 
+            try:
+                num1 = float(input("첫번째 숫자>>"))
+                num2 = float(input("제곱할 수>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        print(num1, "**", num2, "=", cal.squared(num1,num2))
+
+    elif choice == '나머지' or choice == '%':
+        while True: 
+            try:
+                num1 = float(input("첫번째 숫자>>"))
+                num2 = float(input("나눌 수>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        print(num1, "%", num2, "=", cal.modulo(num1,num2))
+
+    elif choice == '제곱근' or choice == '√':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("√", num, "=", cal.square_root(num))
+
+    elif choice == '분산':
+        nums = []
+        while True:
+            try:
+                input_data = input("데이터를 입력하세요(구분자: 공백 또는 쉼표)>> ")
+                nums = [float(x) for x in input_data.replace(",", " ").split()]
+                if len(nums) < 2:
+                    print("데이터를 두 개 이상 입력하세요")
+                    continue
+                else:
+                    break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        print("분산:", cal.variance(nums))
+
+    elif choice == '표준편차':
+        nums = []
+        while True:    
+            try:
+                input_data = input("데이터를 입력하세요(구분자: 공백 또는 쉼표)>> ")
+                nums = [float(x) for x in input_data.replace(",", " ").split()]
+                if len(nums) < 2:
+                    print("데이터를 두 개 이상 입력하세요")
+                    continue
+                else:
+                    break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        print("표준편차:", cal.std_deviation(nums))
+
+    elif choice == '시간계산' or choice == 'h:m:s':
+        while True: 
+            try:
+                num = int(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        print(num,"초", "=", cal.time_change(num),"(시간:분:초)")
+
+    elif choice == '지수' or choice == 'e':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("e^", num, "=", cal.exp(num))
+
+    elif choice == '사인' or choice == 'sin':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("sin", num, "=", cal.sin(num))
+
+    elif choice == '코사인' or choice == 'cos':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("cos", num, "=", cal.cos(num))
+
+    elif choice == '탄젠트' or choice == 'tan':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("tan", num, "=", cal.tan(num))
+
+    elif choice == '역사인' or choice == 'asin':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("asin", num, "=", cal.asin(num))
+
+    elif choice == '약코사인' or choice == 'acos':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("acos", num, "=", cal.acos(num))
+
+    elif choice == '역탄젠트' or choice == 'atan':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print("atan", num, "=", cal.atan(num))
+
+    elif choice == '팩토리얼' or choice == '!':
+        print("숫자를 입력하세요")
+        num1 = float(input(" "))
+        print(num1, "!", "=", cal.factorial(num1))
+        
+    elif choice == '절대값' or choice == 'fabs':
+        while True: 
+            try:
+                num = float(input("숫자>>"))
+                break
+            except ValueError:
+                print("숫자를 입력하세요")
+        print('fabs', num, "=", cal.fabs(num))
+        
+        
+    elif choice == '행렬식' or choice == 'det':
+        while True:
+            try:
+                n = int(input('행렬의 차원 입력(2차 or 3차) : '))
+                break
+            
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        
+        print(cal.deter(n))
+    
+    elif choice == '회귀직선':
+        while True:    #x값을 입력받는 코드　(x値を入力するコード)
+            try:
+                input_data = input("y값을 입력하세요(구분자: 공백 또는 쉼표)>> ")
+                x_values = [float(y) for y in input_data.replace(",", " ").split()]
+                if len(x_values) < 2:
+                    print("x값의 수와 y값의 수가 같아야 합니다")
+                    continue
+                else:
+                    break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue
+        while True:      #y값을 입력받는 코드 (y値を入力するコード)
+            try:
+                input_data = input("y값을 입력하세요(구분자: 공백 또는 쉼표)>> ")
+                y_values = [float(y) for y in input_data.replace(",", " ").split()]
+                if len(y_values) != len(x_values):
+                    print("x값의 수와 y값의 수가 같아야 합니다")
+                    continue
+                else:
+                    break
+            except ValueError:
+                print("숫자를 입력하세요")
+                continue     
+                
+        
+        slope, y_intercept = cal.calculate_regression_line(x_values, y_values)
+        print("기울기:",slope)
+        print("y 절편:",y_intercept )
+        print("회귀직선: y의 예측값 =",y_intercept ,"+", slope, "x")
+        regression_line = np.poly1d([slope, y_intercept])
+
+        plt.scatter(x_values, y_values)  # 데이터 산점도 그래프 (データ　散布図　グラフ)
+        plt.plot(x_values, regression_line(x_values), "r")  # 회귀직선 그래프 (回帰直線 グラフ)
+        plt.xlabel("x")
+        plt.ylabel("y")
+        plt.title("Regression Line")
+        plt.show()
+        
+    elif choice == '비율->cm' or choice == 'RIC':
+        while True:
+            try:
+                D = int(input('대각의 길이: '))
+                H = int(input('높이의 비율 입력: ')
+                W = int(input('너비의 비율 입력: ')
+                break
+            
+            except ValueError:
+                print("다시 입력!!")
+                continue
+        
+        width, height = cal.RIC(D, H, W)
+        print('가로길이:', width, '세로길이:', height)
+        
+    elif choice == '종료':
+        print("사용종료")
+        break
+    else:
+        print("잘못된 입력입니다.")
+        continue
