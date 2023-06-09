@@ -1,0 +1,124 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+import matplotlib.pyplot as plt  #matplotlib라이브러리 (matplotlibライブラリ)
+import numpy as np    #넘파이라이브러리　(numpyライブラリ)
+import math    #math모듈　(mathモジュール)
+
+class Calculator:   
+    def add(self, x, y): #덧셈　(足し算)
+        return x + y
+
+    def subtract(self, x, y): #뺄셈　(引き算)
+        return x - y
+
+    def multiply(self, x, y): #곱셈 (掛け算)
+        return x * y
+
+    def divide(self, x, y): #나눗셈 (割り算)
+        return x / y
+
+    def squared(self, x, y): #제곱 (平方)
+        return x ** y
+
+    def modulo(self, x, y): #나머지　(余り)
+        return x % y
+
+    def square_root(self, x):  #제곱근　(平方根)
+        return math.sqrt(x)
+
+    def variance(self, nums):  #분산　(分散)
+        n = len(nums)
+        mean = sum(nums) / n
+        return sum((x-mean) ** 2 for x in nums) / n
+
+    def std_deviation(self, nums):   #표준편차　(標準偏差)
+        return math.sqrt(self.variance(nums))
+
+    def time_change(self,x):   #초→(시간:분:초)　    秒→(時間:分:秒)
+        return f'{x//3600}:{x%3600//60}:{x%60}'
+
+    def exp(self,x):    #지수 e^x를 반환합니다 (指数　e^xを返還)
+        return math.exp(x)
+
+    def sin(self,x):     #사인값 (サイン値)
+        return math.sin(x)
+
+    def cos(self,x):     #코사인값　(コサイン値)
+        return math.cos(x)
+
+    def tan(self,x):     #탄젠트 (タンジェント)
+        return math.tan(x)
+
+    def asin(self,x):     #역사인값 (逆サイン値)
+        return math.asin(x)
+
+    def acos(self,x):     #역코사인값　(逆サイン値)
+        return math.acos(x)
+
+    def atan(self,x):     #역탄젠트값　　(逆タンジェント値)
+        return math.atan(x)
+    
+    def factorial(self,x):
+        if x == 1:      # n이 1일 때　　(nが１のとき)
+            return 1    # 1을 반환하고 재귀호출을 끝냄　　(１を返還して再帰呼び出し終了)
+        return x * cal.factorial(x - 1)
+    
+    def fabs(self, x):    #절대값　　(絶対値)
+        return math.fabs(x)
+    
+    
+    def deter(self, n):   # 행렬식　　(行列式)
+        l = []
+        
+        print('한 행씩 입력!!(예: 1 2)')
+
+        for i in range(n):
+            a = list(map(int, input().split()))
+            l.append(a)
+
+        if n == 2:
+            return (l[0][0]*l[1][1]) - (l[0][1]*l[1][0])
+
+        
+        else:
+            # 3차 행렬식　　(3次行列式)
+            a1 = l[0][0]*((l[1][1]*l[2][2]) - (l[2][1]*l[1][2]))
+            a2 = l[0][1]*((l[1][0]*l[2][2]) - (l[2][0]*l[1][2]))
+            a3 = l[0][2]*((l[1][0]*l[2][1]) - (l[2][0]*l[1][1]))
+            
+            return a1-a2+a3
+           
+    def calculate_regression_line(self, x_values, y_values):    #회귀직선 (回帰直線)
+        n = len(x_values)
+        if n != len(y_values):
+            raise ValueError("x값의 수와 y값의 수는 같아야 합니다.")
+    
+        # x, y, x^2, xy의 합을 계산합니다.　　(x, y, x^2, xyの合計を計算)
+        
+        sum_x = sum(x_values)
+        sum_y = sum(y_values)
+        sum_x_squared = sum(x ** 2 for x in x_values)
+        sum_xy = sum(x * y for x, y in zip(x_values, y_values))
+
+        # 기울기 (m)와 y절편 (b)을 계산합니다.　　(傾き　(m)と　y切片を計算)
+        slope = (n * sum_xy - sum_x * sum_y) / (n * sum_x_squared - sum_x ** 2)
+        y_intercept = (sum_y - slope * sum_x) / n
+        #coefficients = np.polyfit(x_values, y_values, 1)
+        #p = np.poly1d(coefficients)
+        return slope, y_intercept
+    
+    def RIC(D, H, W):       # 대각 길이와 높이, 너비의 비율알때, 높이와 너비 cm 반환. (対角　長さと高さ、cm변환)
+        r = (D**2 / (H**2 + W**2))**0.5
+        return int(r*W), int(r*H)
+        
+
+
+
+cal = Calculator()
+print("계산 가능한 연산 목록")
+print("더하기(+)   빼기(−)   곱하기(×)   나누기(÷)   제곱(**)  나머지(%)  제곱근(√)  분산 표준편차 시간계산(h:m:s)  지수(e)")  
+print("사인(sin)  코사인(cos)  탄젠트(tan)  역사인(asin)  코사인(acos)  탄젠트(atan)  행렬식(det)   비율->cm(RIC)")
+
